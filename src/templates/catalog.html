@@ -1,0 +1,59 @@
+---
+title: Catalog
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+
+<div class="layout__content-container">
+  <div class="layout__content-header">
+    <div class="layout__content-title">{{ title }}</div>
+    <div class="layout__breadcrumbs breadcrumbs">
+      <a href="/home.html">Home</a>
+      <span> {{ title }}</span>
+    </div>
+  </div>
+
+
+
+  <div class="catalog">
+
+    <div class="catalog__header">
+      <div class="catalog__header-slider">
+
+        <div class="catalog__header-item">
+          <div class="catalog__header-item-box">
+            <div class="catalog__header-label">new</div>
+            <div class="catalog__header-category">Category</div>
+            <div class="catalog__header-title">Title</div>
+            <div class="catalog__header-action">Add to cart</div>
+            <div class="catalog__header-action">Buy</div>
+          </div>
+          <div class="catalog__header-img">{{icon.i('duck')}}</div>
+        </div>
+
+        <div class="catalog__header-item">
+          <div class="catalog__header-item-box">
+            <div class="catalog__header-label"></div>
+            <div class="catalog__header-category"></div>
+            <div class="catalog__header-title"></div>
+            <div class="catalog__header-action"></div>
+          </div>
+          <div class="catalog__header-img"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="catalog__content">
+      <div class="catalog__sidebar">
+
+      </div>
+      <div class="catalog__content"></div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+

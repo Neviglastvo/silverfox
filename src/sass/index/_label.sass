@@ -1,0 +1,102 @@
+.label
+	width: 100%
+	overflow: hidden
+	height: 28px
+
+	&__container
+		display: flex
+		align-items: flex-end
+		width: 100%
+		overflow-y: hidden
+		overflow-x: auto
+		box-sizing: content-box
+
+	&__item
+		height: 28px
+		width: auto
+		position: relative
+		display: flex
+		align-items: center
+		padding: 0 7px 2px 7px
+		background-color: $accent
+		border-radius: 4px 4px 0 0
+		margin-right: 2px
+		opacity: 0.7
+		+tr
+		+h
+			cursor: pointer
+			opacity: 0.8
+			background-color: $accent
+
+		.label__status
+			display: none
+
+		&.disabled
+			filter: grayscale(100%)
+			pointer-events: none
+			.label__url
+				display: none
+
+		&.ready
+			.label__status
+				display: block
+				background-color: $ready
+				animation: none
+				box-shadow: 0 0 5px 1px $ready
+
+		&.inProgress
+			.label__status
+				display: block
+				background-color: $progress
+				animation: none
+				box-shadow: 0 0 5px 1px $progress
+
+		&.active
+			border-radius: 4px 4px 0 0
+			opacity: 1
+			.label__status
+				display: block
+				animation: label-active 2s ease infinite
+
+	&__status
+		width: 6px
+		height: 6px
+		border-radius: 50%
+		pointer-events: none
+		margin: 0 4px
+		+tr
+
+	&__name
+		display: block
+		margin: 0 6px
+		+nosel
+		white-space: nowrap
+		font-size: 16px
+		line-height: 28px
+		font-weight: 300
+		color: $white
+		text-decoration: none
+		+h
+			text-decoration: none
+
+	&__url
+		position: relative
+		height: 14px
+		width: 14px
+		opacity: 0.6
+		+tr
+		+h
+			opacity: 1
+
+		svg
+			+coverdiv
+			fill: $white
+
+
+@keyframes label-active
+	0%
+		box-shadow: 0 0 $white
+
+	100%
+		box-shadow: 0 0 10px 8px transparent
+

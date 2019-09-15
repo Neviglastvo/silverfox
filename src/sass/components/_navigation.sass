@@ -1,0 +1,23 @@
+.navigation
+	display: flex
+	flex-direction: column
+
+	&__item
+		width: 100%
+		svg
+			margin-left: 10px
+			width: 10px
+			height: 10px
+
+	&__link
+		display: flex
+		align-items: center
+		text-decoration: none
+		font-size: 20px
+		line-height: 32px
+		text-transform: uppercase
+		+h
+			color: $accent
+			svg
+				fill: $accent
+

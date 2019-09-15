@@ -1,0 +1,17 @@
+ProjectTitle: silverfox
+
+PageList:
+- file: home.html
+  ready: 1
+- file: catalog.html
+  ready: 1
+- file: blog.html
+  ready: 1
+- file: blog-view.html
+  ready: 1
+- file: about-us.html
+  ready: 1
+- file: contacts.html
+  ready: 1
+- file: delivery.html
+  ready: 1

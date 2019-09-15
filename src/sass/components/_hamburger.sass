@@ -1,0 +1,19 @@
+.hamburger
+	position: absolute
+	right: 20px
+	top: 20px
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 40px
+	width: 40px
+	+h
+		cursor: pointer
+	&__icon
+		@include burger(40px, 6px, 6px, #fff)
+
+	&.active
+		.hamburger__icon
+			@include burger-to-cross
+			&:before, &:after
+				background-color: $accent
