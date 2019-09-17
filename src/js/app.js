@@ -35,7 +35,6 @@ navigationActive()
 $('[data-popup]').each(function () {
 
 	if ($(this).hasClass('js-popup-onhover')) {
-		console.log('hover');
 
 		if(window.location.href === "http://localhost:8080/Catalog.html"){
 			return 0
@@ -50,8 +49,6 @@ $('[data-popup]').each(function () {
 			$('.js-popup').removeClass('active');
 			$('#popup-' + content).addClass('active')
 		});
-
-
 
 	} else {
 
@@ -77,14 +74,14 @@ $('.js-popup-close').on('click', function(event) {
 
 
 
-// $(document).ready(function(){
-// 	$( "a.scrollLink" ).click(function( event ) {
-// 		event.preventDefault();
-// 		$("html, body").animate({
-// 			scrollTop: $($(this).attr("href")).offset().top
-// 		}, 1000);
-// 	});
-// });
+$(document).ready(function(){
+	$( "a.js-scrollLink" ).click(function( event ) {
+		event.preventDefault();
+		$("html, body").animate({
+			scrollTop: $($(this).attr("href")).offset().top
+		}, 1000);
+	});
+});
 
 // $('.js-slider').slick({
 // 	infinite: true,
