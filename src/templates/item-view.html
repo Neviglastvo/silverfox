@@ -1,0 +1,59 @@
+---
+title: Home
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="home-slider">
+  <div class="home-slider__container swiper-container js-slider-home">
+
+    <div class="home-slider__arrow home-slider__arrow--prev js-slider-home-button-next">{{icon.i('arrow')}}</div>
+    <div class="home-slider__arrow home-slider__arrow--next js-slider-home-button-prev">{{icon.i('arrow')}}</div>
+
+    <div class="home-slider__slider swiper-wrapper">
+      {% for page in range(1, 6) %}
+
+      <div class="home-slider__item-container swiper-slide">
+        <div class="home-slider__item">
+          <div class="home-slider__category-container">
+            <div class="home-slider__category-item home-slider__category-item--big">Category</div>
+            <div class="home-slider__category-item home-slider__category-item--medium">Itemname</div>
+            <div class="home-slider__category-item home-slider__category-item--small">99$</div>
+          </div>
+          <div class="home-slider__label">new</div>
+          <div class="home-slider__action-left">
+            <a href="/item-view.html" class="home-slider__action btn">More info</a>
+            <div class="home-slider__action btn">{{icon.i('cart')}} Add to cart </div>
+          </div>
+          <div class="home-slider__action-right btn btn--accent">Buy now</div>
+          <div class="home-slider__box">
+            <div class="home-slider__title">title title title title title title </div>
+            <img class="home-slider__img" src="/img/duck.svg"></img>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+  <div class="home-slider__slider-pagination swiper-container js-slider-home-pagination">
+
+    <div class="swiper-wrapper">
+      {% for page in range(1, 6) %}
+      <div class="home-slider__slider-pagination-item swiper-slide">
+        <div class="home-slider__pagination-title">title</div>
+        <div class="home-slider__pagination-img">{{icon.i('duck')}}</div>
+        <div class="home-slider__pagination-price">99$</div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+

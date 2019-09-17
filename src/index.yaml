@@ -15,3 +15,5 @@ PageList:
   ready: 1
 - file: delivery.html
   ready: 1
+- file: item-view.html
+  ready: 1

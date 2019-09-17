@@ -1,0 +1,206 @@
+.home-slider
+	width: 100%
+	height: 100vh
+	min-height: 600px
+	font-family: $fa
+
+	&__container
+		height: 65vh
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__slider
+		width: 100%
+
+	&__slider-item
+
+	&__item-container
+		width: 100%
+		padding: 20px 120px 60px
+		overflow: hidden
+
+	&__item
+		display: flex
+		width: 100%
+		align-items: center
+		justify-content: center
+		position: relative
+		height: 100%
+		padding: 150px 0 60px 0
+
+	&__category-container
+		position: absolute
+		left: 0
+		top: 0
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+	&__category-item
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+
+		&--big
+			font-size: 32px
+			font-weight: 900
+
+		&--medium
+			font-size: 24px
+			font-weight: 700
+
+		&--small
+			font-size: 18px
+			font-weight: 500
+
+	&__label
+		position: absolute
+		right: 0
+		top: 0
+		background-color: $accent
+		color: $white
+		padding: 4px 8px
+
+	&__action-left
+		position: absolute
+		bottom: 0
+		left: 0
+		display: flex
+		.btn
+			margin-right: 40px
+			&:last-child
+				margin-right: 0
+
+	&__action-right
+		position: absolute
+		bottom: 0
+		right: 0
+
+	&__box
+		width: 100%
+		max-width: 630px
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		pointer-events: none
+
+	&__title
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		font-size: 90px
+		font-weight: 900
+		line-height: 94px
+		text-transform: uppercase
+
+	&__img
+		+rotate(-24)
+		svg
+			width: 100%
+			height: 100%
+
+	&__slider-pagination
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		height: 25vh
+
+	&__slider-pagination-item
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 20px 30px
+		border: 1px solid $accent
+		box-sizing: border-box
+		position: relative
+		+tr
+		+h
+			cursor: pointer
+			color: $accent
+			svg
+				fill: $accent
+		svg
+			+tr
+
+		&.swiper-slide-thumb-active
+			background-color: $accent
+			color: $white
+			+h
+				cursor: default
+
+			svg
+				fill: $white
+
+	&__pagination-title
+		position: absolute
+		left: 30px
+		top: 20px
+		+tr
+
+	&__pagination-img
+		width: 100%
+		height: 100%
+
+
+	&__pagination-price
+		position: absolute
+		right: 30px
+		bottom: 20px
+		+tr
+
+	&__arrow
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto 0
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		border: 2px solid $black
+		padding: 14px
+		z-index: 3
+		+tr
+		+h
+			+scale(1.2)
+			cursor: pointer
+		svg
+			width: 100%
+			height: 100%
+
+		&--prev
+			left: 40px
+			svg
+				+rotate(180)
+
+		&--next
+			right: 40px
+
+	&__footer
+		height: 10vh
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		width: 100%
+		+h
+			cursor: pointer
+
+
+	&__footer-title
+		font-family: $fd
+		font-weight: 700
+		color: $black
+		display: none
+
+	&__footer__icon
+		fill: $black
+		width: 50px
+		height: 30px
+		+rotate(90)
+		+tr

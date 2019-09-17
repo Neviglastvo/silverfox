@@ -2,36 +2,47 @@ import Swiper from 'swiper';
 // import tc from 'timecircles';
 // import slick from 'slick-carousel';
 
-var galleryThumbs = new Swiper('.gallery-thumbs', {
-	spaceBetween: 10,
-	slidesPerView: 4,
+var galleryThumbs = new Swiper('.js-slider-home-pagination', {
+	spaceBetween: 0,
+	slidesPerView: 3,
 	loop: true,
 	freeMode: true,
-		loopedSlides: 5, // looped slides should be the same
+		loopedSlides: 3, // looped slides should be the same
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 	});
-var galleryTop = new Swiper('.gallery-top', {
-	spaceBetween: 10,
+var galleryTop = new Swiper('.js-slider-home', {
+	spaceBetween: 0,
 	loop:true,
-		loopedSlides: 5, // looped slides should be the same
+		loopedSlides: 3, // looped slides should be the same
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.js-slider-home-button-next',
+			prevEl: '.js-slider-home-button-prev',
 		},
 		thumbs: {
 			swiper: galleryThumbs,
 		},
 	});
 
-
+function navigationActive(){
+	let loc = window.location.pathname;
+	$('.navigation').find('a').each(function() {
+		$(this).toggleClass('active', $(this).attr('href') == loc);
+	});
+}
+navigationActive()
 
 $('[data-popup]').each(function () {
 
-
-
 	if ($(this).hasClass('js-popup-onhover')) {
 		console.log('hover');
+
+		if(window.location.href === "http://localhost:8080/Catalog.html"){
+			return 0
+		}
+		if(window.location.href === "http://localhost:8080/Catalog.html"){
+			return 0
+		}
 
 		$(this).on("mouseover", function (e) {
 			e.preventDefault();

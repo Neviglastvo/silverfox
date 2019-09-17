@@ -5,38 +5,173 @@ title: Home
 
 {% block content %}
 
-<!-- Swiper -->
-<div class="swiper-container gallery-top">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
+<div class="home-slider">
+  <div class="home-slider__container swiper-container js-slider-home">
+
+    <div class="home-slider__arrow home-slider__arrow--prev js-slider-home-button-next">{{icon.i('arrow')}}</div>
+    <div class="home-slider__arrow home-slider__arrow--next js-slider-home-button-prev">{{icon.i('arrow')}}</div>
+
+    <div class="home-slider__slider swiper-wrapper">
+      {% for page in range(1, 6) %}
+
+      <div class="home-slider__item-container swiper-slide">
+        <div class="home-slider__item">
+          <div class="home-slider__category-container">
+            <div class="home-slider__category-item home-slider__category-item--big">PERFECT DUCK</div>
+            <div class="home-slider__category-item home-slider__category-item--medium">Toys</div>
+            <div class="home-slider__category-item home-slider__category-item--small">99$</div>
+          </div>
+          <div class="home-slider__label">new</div>
+          <div class="home-slider__action-left">
+            <a href="/item-view.html" class="home-slider__action btn">More info</a>
+            <div class="home-slider__action btn">{{icon.i('cart')}} Add to cart </div>
+          </div>
+          <div class="home-slider__action-right btn btn--accent">Buy now</div>
+          <div class="home-slider__box">
+            <div class="home-slider__title">WOW SUCH A PERFECT DUCK</div>
+            <img class="home-slider__img" src="/img/duck.svg"></img>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+
   </div>
-  <!-- Add Arrows -->
-  <div class="swiper-button-next swiper-button-white"></div>
-  <div class="swiper-button-prev swiper-button-white"></div>
+
+  <div class="home-slider__slider-pagination swiper-container js-slider-home-pagination">
+
+    <div class="swiper-wrapper">
+      {% for page in range(1, 6) %}
+      <div class="home-slider__slider-pagination-item swiper-slide">
+        <div class="home-slider__pagination-title">title</div>
+        <div class="home-slider__pagination-img">{{icon.i('duck')}}</div>
+        <div class="home-slider__pagination-price">99$</div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+
+  <div class="home-slider__footer">
+    <div class="home-slider__footer-title">Explore more</div>
+    <div class="home-slider__footer__icon">{{icon.i('arrow')}}</div>
+  </div>
+
 </div>
-<div class="swiper-container gallery-thumbs">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-    <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
+
+<div class="home-layout">
+  <div class="home-layout__container">
+    <div class="home-layout__item-container home-layout__item-container--1 ">
+      <a href="/item-view.html" class="home-layout__item">
+        <div class="home-layout__label">{{icon.i('duck')}} discount</div>
+        <div class="home-layout__title-container">
+          <div class="home-layout__title home-layout__title--big">Item name</div>
+          <div class="home-layout__title home-layout__title--medium">Category</div>
+          <div class="home-layout__title home-layout__title--small">99$</div>
+        </div>
+        <div class="home-layout__img">{{icon.i('duck')}}</div>
+      </a>
+    </div>
+
+    {% for page in range(0, 2) %}
+    <div class="home-layout__item-container home-layout__item-container--2 ">
+      <a href="/item-view.html" class="home-layout__item">
+        <div class="home-layout__label">{{icon.i('blog')}} blog</div>
+        <div class="home-layout__title-container">
+          <div class="home-layout__title home-layout__title--big">The perfect history of a perfect duck</div>
+          <div class="home-layout__title home-layout__title--medium">3k likes</div>
+        </div>
+        <div class="home-layout__img">{{icon.i('duck')}}</div>
+      </a>
+    </div>
+    {% endfor %}
+
+    {% for page in range(0, 3) %}
+    <div class="home-layout__item-container home-layout__item-container--3 ">
+      <a href="/item-view.html" class="home-layout__item">
+        <div class="home-layout__label">{{icon.i('catalog')}} sale</div>
+        <div class="home-layout__title-container">
+          <div class="home-layout__title home-layout__title--big">Item name</div>
+          <div class="home-layout__title home-layout__title--medium">Category</div>
+          <div class="home-layout__title home-layout__title--small">99$</div>
+        </div>
+        <div class="home-layout__img">{{icon.i('duck')}}</div>
+      </a>
+    </div>
+    {% endfor %}
+
+    {% for page in range(0, 4) %}
+    <div class="home-layout__item-container home-layout__item-container--4 ">
+      <a href="/item-view.html" class="home-layout__item">
+        <div class="home-layout__label">{{icon.i('catalog')}} random item</div>
+        <div class="home-layout__title-container">
+          <div class="home-layout__title home-layout__title--big">Item name</div>
+          <div class="home-layout__title home-layout__title--medium">Category</div>
+          <div class="home-layout__title home-layout__title--small">99$</div>
+        </div>
+        <div class="home-layout__img">{{icon.i('duck')}}</div>
+      </a>
+    </div>
+    {% endfor %}
+
+    {% for page in range(0, 2) %}
+    <div class="home-layout__item-container home-layout__item-container--2 ">
+      <a href="/item-view.html" class="home-layout__item">
+        <div class="home-layout__label">{{icon.i('blog')}} blog</div>
+        <div class="home-layout__title-container">
+          <div class="home-layout__title home-layout__title--big">The perfect history of a perfect duck</div>
+          <div class="home-layout__title home-layout__title--medium">3k likes</div>
+        </div>
+        <div class="home-layout__img">{{icon.i('duck')}}</div>
+      </a>
+    </div>
+    {% endfor %}
+
+
+    {% for page in range(0, 3) %}
+    <div class="home-layout__item-container home-layout__item-container--3 ">
+      <a href="/item-view.html" class="home-layout__item">
+        <div class="home-layout__label">{{icon.i('catalog')}} sale</div>
+        <div class="home-layout__title-container">
+          <div class="home-layout__title home-layout__title--big">Item name</div>
+          <div class="home-layout__title home-layout__title--medium">Category</div>
+          <div class="home-layout__title home-layout__title--small">99$</div>
+        </div>
+        <div class="home-layout__img">{{icon.i('duck')}}</div>
+      </a>
+    </div>
+    {% endfor %}
+
+    <div class="home-layout__item-container home-layout__item-container--1 ">
+      <a href="/item-view.html" class="home-layout__item">
+        <div class="home-layout__label">{{icon.i('duck')}} discount</div>
+        <div class="home-layout__title-container">
+          <div class="home-layout__title home-layout__title--big">Item name</div>
+          <div class="home-layout__title home-layout__title--medium">Category</div>
+          <div class="home-layout__title home-layout__title--small">99$</div>
+        </div>
+        <div class="home-layout__img">{{icon.i('duck')}}</div>
+      </a>
+    </div>
+
+    {% for page in range(0, 4) %}
+    <div class="home-layout__item-container home-layout__item-container--4 ">
+      <a href="/item-view.html" class="home-layout__item">
+        <div class="home-layout__label">{{icon.i('catalog')}} random item</div>
+        <div class="home-layout__title-container">
+          <div class="home-layout__title home-layout__title--big">Item name</div>
+          <div class="home-layout__title home-layout__title--medium">Category</div>
+          <div class="home-layout__title home-layout__title--small">99$</div>
+        </div>
+        <div class="home-layout__img">{{icon.i('duck')}}</div>
+      </a>
+    </div>
+    {% endfor %}
+
   </div>
 </div>
 
 {% endblock %}
+
 

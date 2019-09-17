@@ -32,23 +32,38 @@
             <div class="sidebar__navigation">
               <div class="navigation">
                 <div class="navigation__item js-popup-onhover" data-popup="catalog">
-                  <a href="/Catalog.html" class="navigation__link">Catalog <svg class="svg svg-arrow">
+                  <a href="/Catalog.html" class="navigation__link">
+                    <svg class="svg svg-catalog">
+                      <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                    </svg> Catalog <svg class="svg svg-arrow">
                       <use xlink:href="img/sprite.svg#svg-arrow"></use>
                     </svg>
                   </a>
                 </div>
                 <div class="navigation__item">
-                  <a href="/Blog.html" class="navigation__link">Blog</a>
+                  <a href="/Blog.html" class="navigation__link">
+                    <svg class="svg svg-blog">
+                      <use xlink:href="img/sprite.svg#svg-blog"></use>
+                    </svg>
+                    <span>Blog</span></a>
                 </div>
                 <div class="navigation__item">
-                  <a href="/AboutUs.html" class="navigation__link">About Us</a>
+                  <a href="/AboutUs.html" class="navigation__link"><img src="/img/logo.svg" alt="" class="logo" /> <span>About Us</span></a>
                 </div>
                 <div class="navigation__item">
-                  <a href="/contacts.html" class="navigation__link">contacts</a>
+                  <a href="/contacts.html" class="navigation__link">
+                    <svg class="svg svg-phone">
+                      <use xlink:href="img/sprite.svg#svg-phone"></use>
+                    </svg>
+                    <span>Contacts</span></a>
                 </div>
                 <div class="navigation__item">
-                  <a href="/Delivery.html" class="navigation__link">Delivery</a>
                 </div>
+                <a href="/Delivery.html" class="navigation__link">
+                  <svg class="svg svg-delivery">
+                    <use xlink:href="img/sprite.svg#svg-delivery"></use>
+                  </svg>
+                  <span>Delivery</span></a>
               </div>
             </div>
             <div class="sidebar__user">
@@ -133,36 +148,547 @@
       </div>
       <div class="layout__content">
         <!-- BEGIN content -->
-        <!-- Swiper -->
-        <div class="swiper-container gallery-top">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
+        <div class="home-slider">
+          <div class="home-slider__container swiper-container js-slider-home">
+            <div class="home-slider__arrow home-slider__arrow--prev js-slider-home-button-next">
+              <svg class="svg svg-arrow">
+                <use xlink:href="img/sprite.svg#svg-arrow"></use>
+              </svg>
+            </div>
+            <div class="home-slider__arrow home-slider__arrow--next js-slider-home-button-prev">
+              <svg class="svg svg-arrow">
+                <use xlink:href="img/sprite.svg#svg-arrow"></use>
+              </svg>
+            </div>
+            <div class="home-slider__slider swiper-wrapper">
+              <div class="home-slider__item-container swiper-slide">
+                <div class="home-slider__item">
+                  <div class="home-slider__category-container">
+                    <div class="home-slider__category-item home-slider__category-item--big">PERFECT DUCK</div>
+                    <div class="home-slider__category-item home-slider__category-item--medium">Toys</div>
+                    <div class="home-slider__category-item home-slider__category-item--small">99$</div>
+                  </div>
+                  <div class="home-slider__label">new</div>
+                  <div class="home-slider__action-left">
+                    <a href="/item-view.html" class="home-slider__action btn">More info</a>
+                    <div class="home-slider__action btn">
+                      <svg class="svg svg-cart">
+                        <use xlink:href="img/sprite.svg#svg-cart"></use>
+                      </svg> Add to cart </div>
+                  </div>
+                  <div class="home-slider__action-right btn btn--accent">Buy now</div>
+                  <div class="home-slider__box">
+                    <div class="home-slider__title">WOW SUCH A PERFECT DUCK</div>
+                    <img class="home-slider__img" src="/img/duck.svg"></img>
+                  </div>
+                </div>
+              </div>
+              <div class="home-slider__item-container swiper-slide">
+                <div class="home-slider__item">
+                  <div class="home-slider__category-container">
+                    <div class="home-slider__category-item home-slider__category-item--big">PERFECT DUCK</div>
+                    <div class="home-slider__category-item home-slider__category-item--medium">Toys</div>
+                    <div class="home-slider__category-item home-slider__category-item--small">99$</div>
+                  </div>
+                  <div class="home-slider__label">new</div>
+                  <div class="home-slider__action-left">
+                    <a href="/item-view.html" class="home-slider__action btn">More info</a>
+                    <div class="home-slider__action btn">
+                      <svg class="svg svg-cart">
+                        <use xlink:href="img/sprite.svg#svg-cart"></use>
+                      </svg> Add to cart </div>
+                  </div>
+                  <div class="home-slider__action-right btn btn--accent">Buy now</div>
+                  <div class="home-slider__box">
+                    <div class="home-slider__title">WOW SUCH A PERFECT DUCK</div>
+                    <img class="home-slider__img" src="/img/duck.svg"></img>
+                  </div>
+                </div>
+              </div>
+              <div class="home-slider__item-container swiper-slide">
+                <div class="home-slider__item">
+                  <div class="home-slider__category-container">
+                    <div class="home-slider__category-item home-slider__category-item--big">PERFECT DUCK</div>
+                    <div class="home-slider__category-item home-slider__category-item--medium">Toys</div>
+                    <div class="home-slider__category-item home-slider__category-item--small">99$</div>
+                  </div>
+                  <div class="home-slider__label">new</div>
+                  <div class="home-slider__action-left">
+                    <a href="/item-view.html" class="home-slider__action btn">More info</a>
+                    <div class="home-slider__action btn">
+                      <svg class="svg svg-cart">
+                        <use xlink:href="img/sprite.svg#svg-cart"></use>
+                      </svg> Add to cart </div>
+                  </div>
+                  <div class="home-slider__action-right btn btn--accent">Buy now</div>
+                  <div class="home-slider__box">
+                    <div class="home-slider__title">WOW SUCH A PERFECT DUCK</div>
+                    <img class="home-slider__img" src="/img/duck.svg"></img>
+                  </div>
+                </div>
+              </div>
+              <div class="home-slider__item-container swiper-slide">
+                <div class="home-slider__item">
+                  <div class="home-slider__category-container">
+                    <div class="home-slider__category-item home-slider__category-item--big">PERFECT DUCK</div>
+                    <div class="home-slider__category-item home-slider__category-item--medium">Toys</div>
+                    <div class="home-slider__category-item home-slider__category-item--small">99$</div>
+                  </div>
+                  <div class="home-slider__label">new</div>
+                  <div class="home-slider__action-left">
+                    <a href="/item-view.html" class="home-slider__action btn">More info</a>
+                    <div class="home-slider__action btn">
+                      <svg class="svg svg-cart">
+                        <use xlink:href="img/sprite.svg#svg-cart"></use>
+                      </svg> Add to cart </div>
+                  </div>
+                  <div class="home-slider__action-right btn btn--accent">Buy now</div>
+                  <div class="home-slider__box">
+                    <div class="home-slider__title">WOW SUCH A PERFECT DUCK</div>
+                    <img class="home-slider__img" src="/img/duck.svg"></img>
+                  </div>
+                </div>
+              </div>
+              <div class="home-slider__item-container swiper-slide">
+                <div class="home-slider__item">
+                  <div class="home-slider__category-container">
+                    <div class="home-slider__category-item home-slider__category-item--big">PERFECT DUCK</div>
+                    <div class="home-slider__category-item home-slider__category-item--medium">Toys</div>
+                    <div class="home-slider__category-item home-slider__category-item--small">99$</div>
+                  </div>
+                  <div class="home-slider__label">new</div>
+                  <div class="home-slider__action-left">
+                    <a href="/item-view.html" class="home-slider__action btn">More info</a>
+                    <div class="home-slider__action btn">
+                      <svg class="svg svg-cart">
+                        <use xlink:href="img/sprite.svg#svg-cart"></use>
+                      </svg> Add to cart </div>
+                  </div>
+                  <div class="home-slider__action-right btn btn--accent">Buy now</div>
+                  <div class="home-slider__box">
+                    <div class="home-slider__title">WOW SUCH A PERFECT DUCK</div>
+                    <img class="home-slider__img" src="/img/duck.svg"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next swiper-button-white"></div>
-          <div class="swiper-button-prev swiper-button-white"></div>
+          <div class="home-slider__slider-pagination swiper-container js-slider-home-pagination">
+            <div class="swiper-wrapper">
+              <div class="home-slider__slider-pagination-item swiper-slide">
+                <div class="home-slider__pagination-title">title</div>
+                <div class="home-slider__pagination-img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+                <div class="home-slider__pagination-price">99$</div>
+              </div>
+              <div class="home-slider__slider-pagination-item swiper-slide">
+                <div class="home-slider__pagination-title">title</div>
+                <div class="home-slider__pagination-img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+                <div class="home-slider__pagination-price">99$</div>
+              </div>
+              <div class="home-slider__slider-pagination-item swiper-slide">
+                <div class="home-slider__pagination-title">title</div>
+                <div class="home-slider__pagination-img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+                <div class="home-slider__pagination-price">99$</div>
+              </div>
+              <div class="home-slider__slider-pagination-item swiper-slide">
+                <div class="home-slider__pagination-title">title</div>
+                <div class="home-slider__pagination-img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+                <div class="home-slider__pagination-price">99$</div>
+              </div>
+              <div class="home-slider__slider-pagination-item swiper-slide">
+                <div class="home-slider__pagination-title">title</div>
+                <div class="home-slider__pagination-img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+                <div class="home-slider__pagination-price">99$</div>
+              </div>
+            </div>
+          </div>
+          <div class="home-slider__footer">
+            <div class="home-slider__footer-title">Explore more</div>
+            <div class="home-slider__footer__icon">
+              <svg class="svg svg-arrow">
+                <use xlink:href="img/sprite.svg#svg-arrow"></use>
+              </svg>
+            </div>
+          </div>
         </div>
-        <div class="swiper-container gallery-thumbs">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
-            <div class="swiper-slide" style="background-image:url(http://dummyimage.com/360x16:9/693/fff)"></div>
+        <div class="home-layout">
+          <div class="home-layout__container">
+            <div class="home-layout__item-container home-layout__item-container--1 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg> discount</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--2 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-blog">
+                    <use xlink:href="img/sprite.svg#svg-blog"></use>
+                  </svg> blog</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">The perfect history of a perfect duck</div>
+                  <div class="home-layout__title home-layout__title--medium">3k likes</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--2 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-blog">
+                    <use xlink:href="img/sprite.svg#svg-blog"></use>
+                  </svg> blog</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">The perfect history of a perfect duck</div>
+                  <div class="home-layout__title home-layout__title--medium">3k likes</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--3 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> sale</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--3 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> sale</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--3 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> sale</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--4 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> random item</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--4 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> random item</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--4 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> random item</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--4 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> random item</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--2 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-blog">
+                    <use xlink:href="img/sprite.svg#svg-blog"></use>
+                  </svg> blog</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">The perfect history of a perfect duck</div>
+                  <div class="home-layout__title home-layout__title--medium">3k likes</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--2 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-blog">
+                    <use xlink:href="img/sprite.svg#svg-blog"></use>
+                  </svg> blog</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">The perfect history of a perfect duck</div>
+                  <div class="home-layout__title home-layout__title--medium">3k likes</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--3 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> sale</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--3 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> sale</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--3 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> sale</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--1 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg> discount</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--4 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> random item</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--4 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> random item</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--4 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> random item</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="home-layout__item-container home-layout__item-container--4 ">
+              <a href="/item-view.html" class="home-layout__item">
+                <div class="home-layout__label">
+                  <svg class="svg svg-catalog">
+                    <use xlink:href="img/sprite.svg#svg-catalog"></use>
+                  </svg> random item</div>
+                <div class="home-layout__title-container">
+                  <div class="home-layout__title home-layout__title--big">Item name</div>
+                  <div class="home-layout__title home-layout__title--medium">Category</div>
+                  <div class="home-layout__title home-layout__title--small">99$</div>
+                </div>
+                <div class="home-layout__img">
+                  <svg class="svg svg-duck">
+                    <use xlink:href="img/sprite.svg#svg-duck"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
         <!-- END content -->
