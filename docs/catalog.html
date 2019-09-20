@@ -12,6 +12,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
   </head>
   <body>
+    <div class="help-block">
+      <span>?</span>
+      <div class="help-block__container f">
+        <div class="f fdc">
+          <div class="help-block__title">Buttons</div>
+          <div class="f">
+            <div class="btn">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg> Button</div>
+            <div class="btn btn--small">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="f">
+            <div class="btn btn--accent">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg> Button</div>
+            <div class="btn btn--small btn--accent ">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="f">
+            <div class="btn btn--accent btn--disabled">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg> Button</div>
+            <div class="btn btn--small btn--disabled">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="f fdc">
+          <div class="help-block__title">Buttons</div>
+          <div class="f">
+            <div class="btn">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg> Button</div>
+            <div class="btn btn--small">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="f">
+            <div class="btn btn--accent">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg> Button</div>
+            <div class="btn btn--small btn--accent ">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="f">
+            <div class="btn btn--accent btn--disabled">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg> Button</div>
+            <div class="btn btn--small btn--disabled">
+              <svg class="svg svg-heart">
+                <use xlink:href="img/sprite.svg#svg-heart"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="layout">
       <div class="layout__sidebar">
         <div class="sidebar">
@@ -162,10 +239,14 @@
                 <div class="catalog__header-item">
                   <div class="catalog__header-item-box">
                     <div class="catalog__header-label">new</div>
-                    <div class="catalog__header-category">Category</div>
-                    <div class="catalog__header-title">Title</div>
-                    <div class="catalog__header-action">Add to cart</div>
-                    <div class="catalog__header-action">Buy</div>
+                    <div class="catalog__header-title--container">
+                      <div class="catalog__header-category">Category</div>
+                      <div class="catalog__header-title">Title</div>
+                    </div>
+                    <div class="catalog__header-actions">
+                      <div class="catalog__header-action btn">Add to cart</div>
+                      <div class="catalog__header-action btn btn--accent">Buy</div>
+                    </div>
                   </div>
                   <div class="catalog__header-img">
                     <svg class="svg svg-duck">
@@ -173,21 +254,1021 @@
                     </svg>
                   </div>
                 </div>
-                <div class="catalog__header-item">
+                <div class="catalog__header-item catalog__header-item--small ">
                   <div class="catalog__header-item-box">
-                    <div class="catalog__header-label"></div>
-                    <div class="catalog__header-category"></div>
-                    <div class="catalog__header-title"></div>
-                    <div class="catalog__header-action"></div>
+                    <div class="catalog__header-label">new</div>
+                    <div class="catalog__header-title--container">
+                      <div class="catalog__header-category">Category</div>
+                      <div class="catalog__header-title">Title</div>
+                    </div>
+                    <div class="catalog__header-actions">
+                      <div class="catalog__header-action btn">Add to cart</div>
+                      <div class="catalog__header-action btn btn--accent">Buy</div>
+                    </div>
                   </div>
-                  <div class="catalog__header-img"></div>
+                  <div class="catalog__header-img">
+                    <svg class="svg svg-duck">
+                      <use xlink:href="img/sprite.svg#svg-duck"></use>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="catalog__content">
+            <div class="catalog__layout">
               <div class="catalog__sidebar">
+                <div class="filters">
+                  <div class="filters__head">
+                    <div class="filters__head-title">Filter</div>
+                    <div class="filters__head-icon">
+                      <svg class="svg svg-reload">
+                        <use xlink:href="img/sprite.svg#svg-reload"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="filters__item js-filter-toggler active">
+                    <div class="filters__title">
+                      <div class="filters__title-icon">
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="filters__title-text">Categories</div>
+                      <div class="filters__title-icon">
+                        <svg class="svg svg-cross">
+                          <use xlink:href="img/sprite.svg#svg-cross"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="filters__content">
+                      <div class="filters__list">
+                        <div class="filters__list-item">
+                          <div class="filters__list-item-title">Category</div>
+                          <div class="filters__list-item-count">3</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item js-filter-toggler">
+                    <div class="filters__title">
+                      <div class="filters__title-icon">
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="filters__title-text">Price</div>
+                      <div class="filters__title-icon">
+                        <svg class="svg svg-cross">
+                          <use xlink:href="img/sprite.svg#svg-cross"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="filters__content">
+                      <div class="filters__price">
+                        <div class="filters__price-box">
+                          <input type="text" class="filters__price-input" value="100" />
+                          <input type="text" class="filters__price-input" value="10000" />
+                        </div>
+                        <div class="filters__price-slider">
+                          <div class="filters__price-slider-thingie filters__price-slider-thingie--left"></div>
+                          <div class="filters__price-slider-thingie filters__price-slider-thingie--right"></div>
+                          <div class="filters__price-slider-active"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__item js-filter-toggler">
+                    <div class="filters__title">
+                      <div class="filters__title-icon">
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="filters__title-text">Color</div>
+                      <div class="filters__title-icon">
+                        <svg class="svg svg-cross">
+                          <use xlink:href="img/sprite.svg#svg-cross"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="filters__content">
+                      <div class="filters__list filters__list--wrap">
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                        <div class="filters__list-item filters__list-item--small filters__list-item--colors js-make-active">
+                          <svg class="svg svg-check">
+                            <use xlink:href="img/sprite.svg#svg-check"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="catalog__content"></div>
+              <div class="catalog__content">
+                <div class="catalog-filters">
+                  <div class="catalog-filters__item">
+                    <div class="catalog-filters__title">sort by: </div>
+                    <div class="catalog-filters__value">price descending</div>
+                    <div class="catalog-filters__icon">
+                      <svg class="svg svg-arrow">
+                        <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                      </svg>
+                    </div>
+                    <div class="catalog-filters__dropdown">
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-filters__item">
+                    <div class="catalog-filters__title">sort by: </div>
+                    <div class="catalog-filters__value">price descending</div>
+                    <div class="catalog-filters__icon">
+                      <svg class="svg svg-arrow">
+                        <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                      </svg>
+                    </div>
+                    <div class="catalog-filters__dropdown">
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="catalog-filters__dropdown-item">
+                        <span>ascending</span>
+                        <svg class="svg svg-arrow">
+                          <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog-filters__item">
+                    <div class="catalog-filters__subitem">
+                      <svg class="svg svg-list-3">
+                        <use xlink:href="img/sprite.svg#svg-list-3"></use>
+                      </svg>
+                    </div>
+                    <div class="catalog-filters__subitem">
+                      <svg class="svg svg-list-9">
+                        <use xlink:href="img/sprite.svg#svg-list-9"></use>
+                      </svg>
+                    </div>
+                    <div class="catalog-filters__subitem catalog-filters__subitem--large">
+                      <div class="catalog-filters__title">compare</div>
+                      <div class="catalog-filters__counter">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__content-list">
+                  <!-- <div class="catalog__content-item catalog__content-item--list"> -->
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item">
+                      <div class="card-catalog-item__container">
+                        <div class="card-catalog-item__label">new</div>
+                        <div class="card-catalog-item__title">Category</div>
+                        <img src="./img/img.png" alt="" class="card-catalog-item__img" />
+                        <div class="card-catalog-item__actions-container">
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__action btn">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>To cart</span></div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                            <div class="card-catalog-item__action btn btn--small">
+                              <svg class="svg svg-duck">
+                                <use xlink:href="img/sprite.svg#svg-duck"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="card-catalog-item__actions">
+                            <div class="card-catalog-item__accent btn btn--accent">
+                              <svg class="svg svg-cart">
+                                <use xlink:href="img/sprite.svg#svg-cart"></use>
+                              </svg>
+                              <span>Buy now</span></div>
+                          </div>
+                        </div>
+                        <div class="f fdc">
+                          <div class="card-catalog-item__title">Title</div>
+                          <div class="card-catalog-item__price">99$</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__content-item">
+                    <div class="card-catalog-item card-catalog-item--last">
+                      <div class="card-catalog-item__container">
+                        <svg class="svg svg-reload">
+                          <use xlink:href="img/sprite.svg#svg-reload"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__content-pager">
+                  <div class="catalog__content-pager-item">first</div>
+                  <div class="f">
+                    <div class="catalog__content-pager-item prev">
+                      <svg class="svg svg-arrow">
+                        <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                      </svg>
+                    </div>
+                    <div class="catalog__content-pager-item active">1</div>
+                    <div class="catalog__content-pager-item">2</div>
+                    <div class="catalog__content-pager-item">...</div>
+                    <div class="catalog__content-pager-item">75</div>
+                    <div class="catalog__content-pager-item">76</div>
+                    <div class="catalog__content-pager-item">
+                      <svg class="svg svg-arrow">
+                        <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="catalog__content-pager-item">last</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

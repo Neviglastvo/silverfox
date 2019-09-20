@@ -73,7 +73,6 @@ $('.js-popup-close').on('click', function(event) {
 });
 
 
-
 $(document).ready(function(){
 	$( "a.js-scrollLink" ).click(function( event ) {
 		event.preventDefault();
@@ -81,6 +80,11 @@ $(document).ready(function(){
 			scrollTop: $($(this).attr("href")).offset().top
 		}, 1000);
 	});
+});
+
+$('.js-make-active').on('click', function(event) {
+	event.preventDefault();
+	$(this).toggleClass('active');
 });
 
 // $('.js-slider').slick({

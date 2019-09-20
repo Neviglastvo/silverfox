@@ -2,9 +2,9 @@ ProjectTitle: silverfox
 
 PageList:
 - file: home.html
-  ready: 1
+  ready: 25
 - file: catalog.html
-  ready: 1
+  ready: 60
 - file: blog.html
   ready: 1
 - file: blog-view.html

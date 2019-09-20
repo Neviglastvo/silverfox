@@ -2,6 +2,7 @@
 	width: 100%
 	display: flex
 	flex-direction: column
+	font-family: $fd
 
 	&__header
 		width: 100%
@@ -9,36 +10,123 @@
 
 	&__header-slider
 		height: 100%
+		display: flex
 
 	&__header-item
-		width: 100%
 		height: 100%
 		min-width: 35%
-		flex-grow: 1
+		width: 75%
 		display: flex
 		align-items: center
-		background-color: $black
+		padding: 40px
+		position: relative
+		@include linearGradient(rgba($accent, 0.45), rgba($accent, 0.75))
+		+tr
+		&:last-child
+			width: 35%
+			filter: grayscale(0.75)
+			+h
+				filter: grayscale(0)
+
+
 
 	&__header-item-box
+		height: 100%
 		display: flex
 		flex-direction: column
+		justify-content: space-between
 		align-items: flex-start
 
 	&__header-label
 		background-color: $accent
 		color: #FFF
+		position: absolute
+		right: 0
+		top: 0
+		padding: 8px
+
+	&__header-title--container
+		display: flex
+		flex-direction: column
 
 	&__header-category
+		font-size: 18px
 
 	&__header-title
+		font-size: 36px
+
+	&__header-actions
+		display: flex
+		align-items: center
 
 	&__header-action
+		margin-right: 40px
+		&:last-child
+			margin-right: 0
 
 	&__header-img
 
-	&__content
+	&__layout
+		padding: 10px
+		display: flex
 
 	&__sidebar
+		width: 100%
+		max-width: 320px
 
 	&__content
+		width: 100%
+		display: flex
+		flex-direction: column
 
+	&__content-list
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+
+	&__content-item
+		width: calc(100% / 3)
+		// box-shadow: inset 0 0 0 1px $black
+		border-left: 1px solid $black
+		border-right: 1px solid $black
+		border-bottom: 1px solid $black
+		&:nth-child(3n+1)
+			border-right: none
+		&:nth-child(3n+3)
+			border-left: none
+
+
+		&--list
+			width: 100%
+
+	&__content-pager
+		display: flex
+		width: 100%
+		justify-content: space-between
+		margin-top: -1px
+
+	&__content-pager-item
+		width: 40px
+		height: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 18px
+		font-weight: 500
+		line-height: 40px
+		border: 1px solid $black
+		margin-right: -1px
+		+h
+			cursor: pointer
+			border-color: $accent
+			z-index: 2
+		&:last-child
+			margin-right: 0
+		&.prev
+			svg
+				+rotate(180)
+		&.active
+			background-color: $accent
+			color: $white
+		svg
+			padding: 10px
