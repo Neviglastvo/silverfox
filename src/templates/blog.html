@@ -1,0 +1,182 @@
+---
+title: Blog
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+
+<div class="layout__content-container">
+	<div class="layout__content-header">
+		<div class="layout__content-title">{{ title }}</div>
+		<div class="layout__breadcrumbs breadcrumbs">
+			<a href="/home.html">Home</a>
+			<span> {{ title }}</span>
+		</div>
+	</div>
+
+	<div class="blog">
+		<div class="blog__container">
+			<div class="blog__filter-container">
+				<div class="blog__filter-item">
+					<div class="blog__filter-title">Category: <span>All</span></div>
+					<div class="blog__filter-icon">{{icon.i('arrow')}}</div>
+					<div class="blog__filter-dropdown">
+						<div class="blog__filter-dropdown-title active">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+					</div>
+				</div>
+				<div class="blog__filter-item">
+					<div class="blog__filter-title">Date: <span>2005, november</span></div>
+					<div class="blog__filter-icon">{{icon.i('arrow')}}</div>
+					<div class="blog__filter-dropdown">
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title active">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+					</div>
+				</div>
+				<div class="blog__filter-item">
+					<div class="blog__filter-title">Tags: <span>merch</span></div>
+					<div class="blog__filter-icon">{{icon.i('arrow')}}</div>
+					<div class="blog__filter-dropdown">
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+						<div class="blog__filter-dropdown-title active">Dropdown item</div>
+						<div class="blog__filter-dropdown-title">Dropdown item</div>
+					</div>
+				</div>
+			</div>
+
+			{% for page in range(1, 5) %}
+			<div class="blog__item">
+				<div class="card-blog">
+					<a class="card-blog__img-container" href="/blog-view.html">
+						<img class="card-blog__img" src="./img/space.jpg"></img>
+					</a>
+					<div class="card-blog__box">
+						<div class="card-blog__info-container">
+							<div class="card-blog__info-item">
+								<div class="card-blog__info-text">Category</div>
+							</div>
+							<div class="card-blog__info-item">
+								<div class="card-blog__info-icon">{{icon.i('cart')}}</div>
+								<div class="card-blog__info-text">Comments: 9</div>
+							</div>
+							<div class="card-blog__info-item">
+								<div class="card-blog__info-icon">{{icon.i('cart')}}</div>
+								<div class="card-blog__info-text">Date: 25.01.2005</div>
+							</div>
+						</div>
+						<a href="/blog-view.html" class="card-blog__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						<div class="card-blog__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam impedit modi commodi atque porro! Libero voluptates quae doloremque illum laborum sunt harum ex reiciendis, perspiciatis suscipit fugit assumenda ratione, possimus cumque natus ut atque aliquid voluptatibus at. Cupiditate repudiandae perferendis magnam iure distinctio illum quas, aliquam, sequi hic, eveniet quae.</div>
+						<div class="card-blog__author-container">
+							<div class="card-blog__author-avatar">
+								<img src="./img/logo.svg" alt="" class="card-blog__author-avatar-img" />
+							</div>
+							<div class="card-blog__author-box">
+								<div class="card-blog__author-text">Author</div>
+								<div class="card-blog__author-name">Nevejestvo</div>
+							</div>
+							<a href="/blog-view.html" class="card-blog__action btn">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+
+			<div class="blog__load-more">
+				{{icon.i('reload')}}
+				<div class="blog__load-more-text">load more</div>
+			</div>
+			<div class="blog__random-container">
+				<div class="blog__random-item blog__random-item--1">
+					<div class="card-random-blog">	</div>
+				</div>
+				<div class="blog__random-item blog__random-item--2">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--1">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--3">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--1">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--1">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--3">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--1">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--1">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--1">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--1">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--6">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--6">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--6">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--6">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--6">
+					<div class="card-random-blog">
+					</div>
+				</div>
+				<div class="blog__random-item blog__random-item--6">
+					<div class="card-random-blog">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+{% endblock %}
+

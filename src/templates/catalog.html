@@ -130,7 +130,7 @@ title: Catalog
 				<div class="catalog-filters">
 					<div class="catalog-filters__item">
 						<div class="catalog-filters__title">sort by: </div>
-						<div class="catalog-filters__value">price descending</div>
+						<div class="catalog-filters__value"> price descending</div>
 						<div class="catalog-filters__icon">{{icon.i('arrow')}}</div>
 						<div class="catalog-filters__dropdown">
 							{% for page in range(1, 25) %}
@@ -143,7 +143,7 @@ title: Catalog
 					</div>
 					<div class="catalog-filters__item">
 						<div class="catalog-filters__title">sort by: </div>
-						<div class="catalog-filters__value">price descending</div>
+						<div class="catalog-filters__value"> most popular</div>
 						<div class="catalog-filters__icon">{{icon.i('arrow')}}</div>
 						<div class="catalog-filters__dropdown">
 							{% for page in range(1, 25) %}
@@ -155,10 +155,10 @@ title: Catalog
 						</div>
 					</div>
 					<div class="catalog-filters__item">
-						<div class="catalog-filters__subitem">
+						<div class="catalog-filters__subitem js-catalog-switcher" data-catalog-type="list">
 							{{icon.i('list-3')}}
 						</div>
-						<div class="catalog-filters__subitem">
+						<div class="catalog-filters__subitem js-catalog-switcher" data-catalog-type="grid">
 							{{icon.i('list-9')}}
 						</div>
 						<div class="catalog-filters__subitem catalog-filters__subitem--large">
@@ -168,7 +168,7 @@ title: Catalog
 					</div>
 				</div>
 
-				<div class="catalog__content-list">
+				<div class="catalog__content-list js-catalog grid">
 					<!-- <div class="catalog__content-item catalog__content-item--list"> -->
 						{% for page in range(1, 12) %}
 						<div class="catalog__content-item">
@@ -188,7 +188,7 @@ title: Catalog
 											<div class="card-catalog-item__accent btn btn--accent">{{icon.i('cart')}} <span>Buy now</span></div>
 										</div>
 									</div>
-									<div class="f fdc">
+									<div class="card-catalog-item__box">
 										<div class="card-catalog-item__title">Title</div>
 										<div class="card-catalog-item__price">99$</div>
 									</div>
@@ -208,19 +208,19 @@ title: Catalog
 					</div>
 
 					<div class="catalog__content-pager">
-						<div class="catalog__content-pager-item">first</div>
+						<div class="catalog__content-pager-item prev">{{icon.i('arrow')}}</div>
 
-						<div class="f">
-							<div class="catalog__content-pager-item prev">{{icon.i('arrow')}}</div>
+						<div class="catalog__content-pager-container">
+
 							<div class="catalog__content-pager-item active">1</div>
 							<div class="catalog__content-pager-item">2</div>
 							<div class="catalog__content-pager-item">...</div>
 							<div class="catalog__content-pager-item">75</div>
 							<div class="catalog__content-pager-item">76</div>
-							<div class="catalog__content-pager-item">{{icon.i('arrow')}}</div>
+
 						</div>
 
-						<div class="catalog__content-pager-item">last</div>
+						<div class="catalog__content-pager-item">{{icon.i('arrow')}}</div>
 					</div>
 
 				</div>

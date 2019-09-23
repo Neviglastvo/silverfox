@@ -1,0 +1,133 @@
+.blog-view
+	width: 100%
+	padding: 20px
+	padding-top: 0
+
+	&__container
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__hero
+		display: flex
+		flex-direction: column
+		padding: 60px
+		width: 100%
+		height: 70vh
+		min-height: 400px
+		position: relative
+
+	&__hero-img
+		+coverdiv
+		z-index: 0
+		pointer-events: none
+		+darken(#000, 0.75)
+
+	&__img
+		+coverimg
+		+coverdiv
+		z-index: -1
+
+	&__hero-box
+		height: 100%
+		width: 100%
+		z-index: 1
+		display: flex
+		justify-content: space-around
+		flex-direction: column
+		align-items: flex-start
+
+	&__hero-title
+		width: 100%
+		font-size: 32px
+		font-family: $fa
+		font-weight: 700
+		color: #FFF
+
+	&__hero-item
+		display: flex
+		align-items: center
+		color: #FFF
+
+	&__info-icon
+		width: 14px
+		height: 14px
+		margin-right: 14px
+
+	&__info-text
+		color: #FFF
+		font-family: $fc
+		font-size: 14px
+		line-height: 30px
+
+	&__author-container
+		width: 100%
+		display: flex
+		align-items: center
+
+	&__author-avatar
+		width: 80px
+		min-width: 80px
+		height: 80px
+		position: relative
+		border-radius: 50%
+		overflow: hidden
+		margin-right: 30px
+
+	&__author-avatar-img
+		+coverdiv
+
+	&__author-box
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		&:last-child
+			margin-left: auto
+
+	&__author-text
+		color: #FFF
+		font-family: $fc
+		font-size: 12px
+		margin-bottom: 10px
+
+	&__author-name
+		color: #FFF
+		font-family: $fc
+		font-size: 16px
+
+	&__content
+		background-color: $white
+		width: 100%
+		max-width: 700px
+		display: flex
+		flex-direction: column
+		padding: 15px
+		z-index: 3
+		margin-top: -60px
+		margin-bottom: 60px
+		+materialShadow(3,3)
+
+		p
+			margin: 20px 0
+			width: 100%
+			font-size: 14px
+			line-height: 16px
+			font-family: $fc
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+
+		img
+			width: 100%
+			height: auto
+			margin: 20px 0
+
+
+	&__comments
+		max-width: 700px
+		.comment-add
+			margin-top: 80px
+			margin-bottom: 80px
+

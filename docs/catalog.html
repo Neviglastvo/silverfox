@@ -89,6 +89,18 @@
         </div>
       </div>
     </div>
+    <div class="check18 js-check18">
+      <div class="check18__container">
+        <div class="check18__logo">
+          <img src="./img/logo.svg" alt="" class="logo" />
+        </div>
+        <div class="check18__title">Hello. Wanna enter?</div>
+        <div class="check18__actions">
+          <div class="check18__action btn">No</div>
+          <div class="check18__action btn btn--accent js-entrance">Yes</div>
+        </div>
+      </div>
+    </div>
     <div class="layout">
       <div class="layout__sidebar">
         <div class="sidebar">
@@ -144,7 +156,7 @@
               </div>
             </div>
             <div class="sidebar__user">
-              <div class="user">
+              <div class="user" data-popup="cabinet">
                 <div class="user__avatar">N</div>
                 <div class="user__name">Nevejestvo</div>
                 <div class="user__icon">
@@ -481,7 +493,7 @@
                 <div class="catalog-filters">
                   <div class="catalog-filters__item">
                     <div class="catalog-filters__title">sort by: </div>
-                    <div class="catalog-filters__value">price descending</div>
+                    <div class="catalog-filters__value"> price descending</div>
                     <div class="catalog-filters__icon">
                       <svg class="svg svg-arrow">
                         <use xlink:href="img/sprite.svg#svg-arrow"></use>
@@ -636,7 +648,7 @@
                   </div>
                   <div class="catalog-filters__item">
                     <div class="catalog-filters__title">sort by: </div>
-                    <div class="catalog-filters__value">price descending</div>
+                    <div class="catalog-filters__value"> most popular</div>
                     <div class="catalog-filters__icon">
                       <svg class="svg svg-arrow">
                         <use xlink:href="img/sprite.svg#svg-arrow"></use>
@@ -790,12 +802,12 @@
                     </div>
                   </div>
                   <div class="catalog-filters__item">
-                    <div class="catalog-filters__subitem">
+                    <div class="catalog-filters__subitem js-catalog-switcher" data-catalog-type="list">
                       <svg class="svg svg-list-3">
                         <use xlink:href="img/sprite.svg#svg-list-3"></use>
                       </svg>
                     </div>
-                    <div class="catalog-filters__subitem">
+                    <div class="catalog-filters__subitem js-catalog-switcher" data-catalog-type="grid">
                       <svg class="svg svg-list-9">
                         <use xlink:href="img/sprite.svg#svg-list-9"></use>
                       </svg>
@@ -806,7 +818,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="catalog__content-list">
+                <div class="catalog__content-list js-catalog grid">
                   <!-- <div class="catalog__content-item catalog__content-item--list"> -->
                   <div class="catalog__content-item">
                     <div class="card-catalog-item">
@@ -840,7 +852,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -879,7 +891,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -918,7 +930,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -957,7 +969,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -996,7 +1008,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -1035,7 +1047,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -1074,7 +1086,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -1113,7 +1125,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -1152,7 +1164,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -1191,7 +1203,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -1230,7 +1242,7 @@
                               <span>Buy now</span></div>
                           </div>
                         </div>
-                        <div class="f fdc">
+                        <div class="card-catalog-item__box">
                           <div class="card-catalog-item__title">Title</div>
                           <div class="card-catalog-item__price">99$</div>
                         </div>
@@ -1248,25 +1260,23 @@
                   </div>
                 </div>
                 <div class="catalog__content-pager">
-                  <div class="catalog__content-pager-item">first</div>
-                  <div class="f">
-                    <div class="catalog__content-pager-item prev">
-                      <svg class="svg svg-arrow">
-                        <use xlink:href="img/sprite.svg#svg-arrow"></use>
-                      </svg>
-                    </div>
+                  <div class="catalog__content-pager-item prev">
+                    <svg class="svg svg-arrow">
+                      <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="catalog__content-pager-container">
                     <div class="catalog__content-pager-item active">1</div>
                     <div class="catalog__content-pager-item">2</div>
                     <div class="catalog__content-pager-item">...</div>
                     <div class="catalog__content-pager-item">75</div>
                     <div class="catalog__content-pager-item">76</div>
-                    <div class="catalog__content-pager-item">
-                      <svg class="svg svg-arrow">
-                        <use xlink:href="img/sprite.svg#svg-arrow"></use>
-                      </svg>
-                    </div>
                   </div>
-                  <div class="catalog__content-pager-item">last</div>
+                  <div class="catalog__content-pager-item">
+                    <svg class="svg svg-arrow">
+                      <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1367,6 +1377,14 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="hamburger active js-popup-close">
+          <span class="hamburger__icon"></span>
+        </div>
+      </div>
+      <div id="popup-cabinet" class="popup js-popup">
+        <div class="popup__container">
+          <div class="popup__title">Nevejestvo`s personal cabinet</div>
         </div>
         <div class="hamburger active js-popup-close">
           <span class="hamburger__icon"></span>

@@ -13,19 +13,31 @@
 		display: flex
 
 	&__header-item
+		width: 100%
 		height: 100%
-		min-width: 35%
-		width: 75%
 		display: flex
 		align-items: center
 		padding: 40px
 		position: relative
 		@include linearGradient(rgba($accent, 0.45), rgba($accent, 0.75))
+		flex-shrink: 5
 		+tr
+		+h
+			&:first-child
+
+			&:last-child
+				flex-shrink: 2
+
+		&:first-child
+			flex-shrink: 1
+			+h
+
+
 		&:last-child
-			width: 35%
+			flex-shrink: 2
 			filter: grayscale(0.75)
 			+h
+				flex-shrink: 1
 				filter: grayscale(0)
 
 
@@ -67,7 +79,7 @@
 	&__header-img
 
 	&__layout
-		padding: 10px
+		padding: 20px
 		display: flex
 
 	&__sidebar
@@ -83,10 +95,73 @@
 		width: 100%
 		display: flex
 		flex-wrap: wrap
+		&.grid
+			.catalog__content-item
+				width: calc(100% / 3)
+
+		&.list
+			.catalog__content-item
+				width: 100%
+				&:nth-child(3n+1)
+					border-right: 1px solid $black
+				&:nth-child(3n+3)
+					border-left: 1px solid $black
+				.card-catalog-item
+					min-height: 200px
+					&:before
+						padding-bottom: 0
+						+coverdiv
+					+h
+						.card-catalog-item__img
+							opacity: 1
+
+					&__container
+						width: 100%
+						padding: 0
+						flex-direction: column
+						flex-wrap: wrap
+
+					&__box
+						order: 3
+						width: 100%
+						max-width: calc(100%/3)
+						flex-direction: column-reverse
+
+					&__title
+						order: 2
+						padding: 15px
+
+					&__img
+						padding: 15px
+						order: 1
+						position: relative
+						width: 100%
+						max-width: 300px
+						max-width: calc(100%/3)
+						height: 100%
+						pointer-events: all
+						border-right: 1px solid $black
+						left: auto
+						right: auto
+
+					&__actions-container
+						padding: 15px
+						opacity: 1
+						order: 4
+						height: 100%
+						width: 100%
+						max-width: calc(100%/3)
+						justify-content: flex-end
+						align-items: flex-end
+
+					&__actions
+						flex-direction: row-reverse
+						.btn
+
+					&__price
+						padding: 0 15px 15px 15px
 
 	&__content-item
-		width: calc(100% / 3)
-		// box-shadow: inset 0 0 0 1px $black
 		border-left: 1px solid $black
 		border-right: 1px solid $black
 		border-bottom: 1px solid $black
@@ -95,15 +170,18 @@
 		&:nth-child(3n+3)
 			border-left: none
 
-
-		&--list
-			width: 100%
-
 	&__content-pager
 		display: flex
 		width: 100%
 		justify-content: space-between
 		margin-top: -1px
+
+	&__content-pager-container
+		display: flex
+		justify-content: center
+		width: 100%
+		width: calc(100% / 3)
+
 
 	&__content-pager-item
 		width: 40px

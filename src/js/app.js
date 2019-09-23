@@ -1,4 +1,45 @@
 import Swiper from 'swiper';
+import Cookies from 'js-cookie';
+
+
+
+function entranceKeeper(){
+
+	let val = Cookies.get('enter')
+	console.log(val);
+
+	if (!Cookies.get('enter')) {
+
+		console.log(' create ');
+		Cookies.set('enter', 'false');
+		$('.layout').addClass('blur');
+		$('.js-check18').addClass('active');
+
+	}
+
+	if (val === 'false') {
+
+		console.log('exist and false');
+		$('.layout').addClass('blur');
+		$('.js-check18').addClass('active');
+
+	} else if (val === 'true'){
+
+		console.log('else (val=true)');
+		$('.layout').removeClass('blur');
+		$('.js-check18').removeClass('active');
+
+	}
+
+}
+entranceKeeper()
+
+$('.js-entrance').on('click', function(event) {
+	event.preventDefault();
+	Cookies.set('enter', 'true');
+	entranceKeeper()
+});
+
 // import tc from 'timecircles';
 // import slick from 'slick-carousel';
 
@@ -36,9 +77,6 @@ $('[data-popup]').each(function () {
 
 	if ($(this).hasClass('js-popup-onhover')) {
 
-		if(window.location.href === "http://localhost:8080/Catalog.html"){
-			return 0
-		}
 		if(window.location.href === "http://localhost:8080/Catalog.html"){
 			return 0
 		}
@@ -85,6 +123,19 @@ $(document).ready(function(){
 $('.js-make-active').on('click', function(event) {
 	event.preventDefault();
 	$(this).toggleClass('active');
+});
+
+
+$('[data-catalog-type]').each(function () {
+
+	$(this).on("click", function (e) {
+		e.preventDefault();
+		let data = $(this).attr('data-catalog-type');
+		let lastClass = $('.js-catalog').attr('class').split(' ').pop();
+		$('.js-catalog').removeClass(lastClass);
+		$('.js-catalog').addClass(data)
+	});
+
 });
 
 // $('.js-slider').slick({

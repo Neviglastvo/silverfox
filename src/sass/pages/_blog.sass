@@ -1,0 +1,134 @@
+.blog
+	width: 100%
+	padding: 0 20px
+	font-family: $fc
+
+	&__container
+		border: 1px solid $black
+		width: 100%
+		display: flex
+		flex-direction: column
+
+
+	&__filter-container
+		display: flex
+		width: 100%
+		border-bottom: 1px solid $black
+
+	&__filter-item
+		width: calc(100% / 3)
+		min-height: 40px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		padding: 0 20px
+		border-right: 1px solid $black
+		&:last-child
+			border-right: none
+		+h
+			cursor: pointer
+			.blog__filter-icon
+				svg
+					+rotate(90)
+			.blog__filter-dropdown
+				opacity: 1
+				max-height: 300px
+				padding: 20px 20px
+				overflow: visible
+				border: 1px solid $black
+				border-top: none
+
+	&__filter-title
+		font-size: 16px
+		font-weight: 700
+
+	&__filter-icon
+		width: 12px
+		height: 12px
+		svg
+			+tr
+
+	&__filter-dropdown
+		padding: 0 20px
+		overflow: hidden
+		max-height: 0
+		+materialShadow(2,3)
+		position: absolute
+		top: 100%
+		left: -1px
+		right: -1px
+		z-index: 5
+		background-color: $white
+		border: 1px solid $black
+		border-top: none
+		+tr
+		+h
+			cursor: default
+
+	&__filter-dropdown-title
+		font-size: 14px
+		+h
+			cursor: pointer
+			color: $accent
+
+		&.active
+			color: $accent
+
+	&__item
+		border-bottom: 1px solid $black
+		&:nth-child(odd)
+			.card-blog
+				flex-direction: row-reverse
+
+
+	&__load-more
+		height: 80px
+		padding: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		+h
+			color: $accent
+			cursor: pointer
+
+		svg
+			height: 100%
+			max-width: 35px
+			width: auto
+			margin-right: 20px
+			+tr
+
+	&__load-more-text
+		font-family: $fa
+		text-transform: uppercase
+		font-size: 16px
+		+tr
+
+	&__random-container
+		display: flex
+		flex-wrap: wrap
+		margin: -1px
+		border: 1px solid $black
+
+	&__random-item
+		border: 1px solid $white
+		width: 100%
+		height: 240px
+
+		&--1
+			width: 25%
+
+		&--2
+			width: 50%
+
+		&--3
+			width: 75%
+
+		&--4
+			width: 25%
+
+		&--6
+			width: calc(100% / 6)
+			height: 180px
+

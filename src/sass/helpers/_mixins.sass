@@ -194,7 +194,7 @@
       background-color: $colorHover
 
 
-@mixin materialShadow ($lvl, $hoverlvl, $color: #000)
+@mixin materialShadow ($lvl: 2, $hoverlvl: 3, $color: #000)
   position: relative
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
   @if $lvl == 1
@@ -207,10 +207,6 @@
     box-shadow: 0 14px 28px rgba($color, .25), 0 10px 10px rgba($color, .22)
   @else if $lvl == 5
     box-shadow: 0 19px 38px rgba($color, .30), 0 15px 12px rgba($color, .22)
-  +h
-    box-shadow: none
-    &:after
-      opacity: 1
 
   &:after
     content: ''
@@ -229,6 +225,11 @@
       box-shadow: 0 14px 28px rgba($color, .25), 0 10px 10px rgba($color, .22)
     @else if $hoverlvl == 5
       box-shadow: 0 19px 38px rgba($color, .30), 0 15px 12px rgba($color, .22)
+
+  +h
+    box-shadow: none
+    &:after
+      opacity: 1
 
 @mixin checkbox($size: '14px', $selectedsize: '6px', $color: $accent, $rounded: rounded)
   display: flex
