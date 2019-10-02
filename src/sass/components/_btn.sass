@@ -1,17 +1,16 @@
 $btnHeight: 36px
+$btnHeightBig: 60px
 .btn
 	box-sizing: border-box
 	display: flex
 	align-items: center
-	justify-content: center
 	height: $btnHeight
-	padding: 10px 10px
+	padding: 0 10px
 	border: 1px solid $black
 	color: $black
 	font-family: $fd
 	font-size: 14px
 	line-height: $btnHeight
-	text-align: center
 	white-space: nowrap
 	font-weight: 700
 	+tr
@@ -43,15 +42,32 @@ $btnHeight: 36px
 			svg
 				fill: $white
 
+	&--big
+		padding: 20px
+		line-height: $btnHeightBig
+
 	&--small
 		width: $btnHeight
 		min-width: $btnHeight
 		max-width: $btnHeight
 		padding: 0
+		justify-content: center
+		text-align: center
 		svg
 			margin-right: 0
 
 	&--disabled
 		pointer-events: none
 		filter: grayscale(100%)
+
+	&--privat
+		border-color: rgb(139, 195, 74)
+		background-color: rgb(139, 195, 74)
+		color: #fff
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px 0px
+		+tr
+		+h
+			color: #fff
+			border-color: rgb(139, 195, 1)
+			background-color: rgb(139, 195, 1)
 

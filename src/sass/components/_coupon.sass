@@ -1,0 +1,54 @@
+.coupon
+	display: flex
+	flex-direction: column
+	align-items: center
+	border: 1px solid $black
+	padding: 20px 15px
+
+	&__title
+		width: 100%
+		font-weight: 16px
+		font-family: $fc
+		text-align: center
+		margin-bottom: 20px
+
+	&__form
+		display: flex
+		border: 1px solid $black
+		max-width: 262px
+		margin-bottom: 20px
+
+	&__input
+		width: 100%
+		font-size: 28px
+		color: $accent
+		padding: 0 20px
+
+	&__form-action
+		border-left: 1px solid $black
+		width: 40px
+		min-width: 40px
+		height: 40px
+		padding: 10px
+		background-color: green
+		svg
+			fill: $white
+
+	&__discount
+		margin-bottom: 6px
+		font-size: 16px
+		color: $black
+		font-family: $fd
+		line-height: 18px
+		&:last-child
+			margin-bottom: 0
+		span
+			color: $accent
+
+	&__final
+		margin-top: 20px
+		font-size: 18px
+		font-family: $fa
+		span
+			color: $accent
+

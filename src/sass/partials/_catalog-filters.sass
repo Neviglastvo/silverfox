@@ -76,6 +76,10 @@
 		align-items: center
 		justify-content: center
 		border-right: 1px solid $black
+		+tr
+		+h
+			svg
+				fill: $accent
 		&:last-child
 			border-right: none
 
@@ -85,7 +89,12 @@
 		svg
 			width: 24px
 			height: 24px
+			+tr
 
+		&.active
+			background-color: $accent
+			svg
+				fill: $white
 
 	&__counter
 		width: 20px

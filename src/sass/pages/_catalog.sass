@@ -32,15 +32,12 @@
 			flex-shrink: 1
 			+h
 
-
 		&:last-child
 			flex-shrink: 2
 			filter: grayscale(0.75)
 			+h
 				flex-shrink: 1
 				filter: grayscale(0)
-
-
 
 	&__header-item-box
 		height: 100%
@@ -126,6 +123,7 @@
 						width: 100%
 						max-width: calc(100%/3)
 						flex-direction: column-reverse
+						align-items: flex-start
 
 					&__title
 						order: 2
@@ -198,6 +196,9 @@
 			cursor: pointer
 			border-color: $accent
 			z-index: 2
+			color: $accent
+			svg
+				fill: $accent
 		&:last-child
 			margin-right: 0
 		&.prev
@@ -208,3 +209,4 @@
 			color: $white
 		svg
 			padding: 10px
+			+tr

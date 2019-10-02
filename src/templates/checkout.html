@@ -1,0 +1,185 @@
+---
+title: Checkout
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+
+<div class="layout__content-container">
+  <div class="layout__content-header">
+    <div class="layout__content-title">{{ title }}</div>
+    <div class="layout__breadcrumbs breadcrumbs">
+      <a href="home.html">Home</a>
+      <span> {{ title }}</span>
+    </div>
+  </div>
+
+  <div class="checkout">
+    <div class="checkout__list-container">
+      <div class="checkout__list">
+
+        {% for page in range(0, 4) %}
+        <div class="checkout__list-item">
+          <a class="card-catalog-small" href="catalog-item.html">
+            <img src="./img/img.png" alt="" class="card-catalog-small__img" />
+            <div class="card-catalog-small__title">Perfect item title</div>
+            <div class="card-catalog-small__price">250 <span>UAH</span></div>
+            <div class="card-catalog-small__action">{{icon.i('cross')}}</div>
+          </a>
+        </div>
+        {% endfor %}
+
+        <div class="checkout__list-item card-catalog-small--last">
+          <a class="card-catalog-small" href="catalog-item.html">
+            <div class="card-catalog-small__title">Summary:</div>
+            <div class="card-catalog-small__price">1000 <span>UAH</span></div>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="checkout__list2">
+
+        <div class="coupon">
+          <div class="coupon__title">Have a coupon?</div>
+
+          <form action="" class="coupon__form">
+            <input type="text" class="coupon__input" placeholder="xxx - xxx - xxx" value="HJK-LDR-TVB" />
+            <button class="coupon__form-action">{{icon.i('check')}}</button>
+          </form>
+
+          <div class="coupon__discount">Your discount: <span>10%</span></div>
+          <div class="coupon__discount">Your personal discount: <span>10%</span></div>
+
+          <div class="coupon__final">
+            1000 - 20% = <span>800 UAH</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="checkout__item">
+      <div class="checkout-login">
+
+        <div class="checkout-login__tabs js-tab-container">
+
+          <div class="checkout-login__head-title">Fill your info</div>
+
+          <div class="checkout-login__head">
+            <div class="checkout-login__tab-title js-tab active">Login</div>
+            <div class="checkout-login__tab-title js-tab">Logined</div>
+            <div class="checkout-login__tab-title js-tab">Without login</div>
+          </div>
+
+          <div class="checkout-login__tab js-tab-item active" data-tab-name="Login">
+
+            <form action="" class="checkout-login__form">
+              <input class="checkout-login__input" placeholder="mail or login"></input>
+              <input class="checkout-login__input" placeholder="password"></input>
+            </form>
+
+            <div class="checkout-login__actions">
+              <a href="" class="checkout-login__action">{{icon.i('facebook')}}</a>
+              <a href="" class="checkout-login__action">{{icon.i('google')}}</a>
+            </div>
+          </div>
+
+          <div class="checkout-login__tab js-tab-item" data-tab-name="Logined">
+
+            <div class="checkout-login__user">
+              <div class="checkout-login__user-box">
+                <div class="checkout-login__user-avatar">
+                  <img src="./img/logo/logo.svg" alt="" class="checkout-login__user-img" />
+                </div>
+                <div class="checkout-login__user-name">Nevejestvo</div>
+              </div>
+
+              <div class="checkout-login__user-list">
+                <div class="checkout-login__user-item">
+                  <div class="checkout-login__user-title">Name:</div>
+                  <div class="checkout-login__user-content">Nevejestvo</div>
+                </div>
+                <div class="checkout-login__user-item">
+                  <div class="checkout-login__user-title">Phone:</div>
+                  <div class="checkout-login__user-content">+380 12 456 78 90</div>
+                </div>
+                <div class="checkout-login__user-item">
+                  <div class="checkout-login__user-title">Adress:</div>
+                  <div class="checkout-login__user-content">Lorem ipsum dolor</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="checkout-login__tab js-tab-item" data-tab-name="Without login">
+
+            <form action="" class="checkout-login__form">
+              <input class="checkout-login__input" placeholder="Name"></input>
+              <input class="checkout-login__input" placeholder="Phone"></input>
+              <input class="checkout-login__input" placeholder="Adress"></input>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="checkout__item">
+
+      <div class="checkout-login">
+
+        <div class="checkout-login__tabs js-tab-container">
+
+          <div class="checkout-login__head-title">Choose payment method</div>
+
+
+          <div class="checkout-login__head">
+            <div class="checkout-login__tab-title js-tab active">Cash (to courier)</div>
+            <div class="checkout-login__tab-title js-tab">Card</div>
+            <div class="checkout-login__tab-title js-tab">Privat 24</div>
+          </div>
+
+          <div class="checkout-login__tab js-tab-item active" data-tab-name="Cash (to courier)">
+
+            <div class="checkout-login__courier">
+              <div class="checkout-login__courier-sum checkout-login__courier-sum--small">800 + <span>50 (courier`s service)</span></div>
+              <div class="checkout-login__courier-sum">850 <span>UAH</span></div>
+            </div>
+
+          </div>
+
+          <div class="checkout-login__tab js-tab-item" data-tab-name="Card">
+            <div class="checkout-login__card">
+              <input type="text" class="checkout-login__card-input" placeholder="xxxx-xxxx-xxxx-xxxx" />
+              <input type="text" class="checkout-login__card-input checkout-login__card-input--medium" placeholder="xx / xx" />
+              <input type="text" class="checkout-login__card-input checkout-login__card-input--small" placeholder="xxx" />
+            </div>
+          </div>
+
+          <div class="checkout-login__tab js-tab-item" data-tab-name="Privat 24">
+            <div class="checkout-login__privat">
+              <div class="btn btn--privat">Proceed</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="checkout__action">
+      <div class="btn btn--accent btn--big">Checkout</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+

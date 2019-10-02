@@ -1,0 +1,53 @@
+.popup-cart
+	width: 100%
+	height: 100%
+	display: flex
+	flex-direction: column
+
+	&__list-actions
+		width: 100%
+		display: flex
+		justify-content: flex-end
+		border: 1px solid $black
+
+	&__list-action
+		display: flex
+		align-items: center
+		justify-content: center
+		border-left: none
+		border-left: 1px solid $black
+		padding: 5px
+		&:first-child
+			border-left: 1px solid $black
+		+h
+			background-color: $accent
+			cursor: pointer
+			svg
+				fill: $white
+
+		svg
+			width: 18px
+			height: 18px
+
+	&__list
+		margin-bottom: 20px
+		width: 100%
+		height: auto
+		max-height: 100%
+		overflow-y: auto
+		display: flex
+		flex-wrap: wrap
+
+	&__item
+		width: 100%
+		border: 1px solid $black
+		border-top: none
+
+	&__actions
+		margin-top: auto
+		width: 100%
+		display: flex
+		justify-content: space-between
+
+	&__action
+

@@ -1,0 +1,45 @@
+{% extends "layouts/_popup.html" %}
+
+{% block popupContent %}
+
+<div class="popup__title">Nevejestvo`s cart</div>
+
+<div class="popup-cart">
+
+	<div class="popup-cart__list-actions">
+		<div class="popup-cart__list-action">{{icon.i('list-3')}}</div>
+		<div class="popup-cart__list-action">{{icon.i('list-9')}}</div>
+	</div>
+
+	<div class="popup-cart__list">
+
+		{% for page in range(0, 4) %}
+		<div class="popup-cart__item">
+
+			<a class="card-catalog-small" href="catalog-item.html">
+				<img src="./img/img.png" alt="" class="card-catalog-small__img" />
+				<div class="card-catalog-small__title">Perfect item title</div>
+				<div class="card-catalog-small__price">250 <span>UAH</span></div>
+				<div class="card-catalog-small__action">{{icon.i('cross')}}</div>
+			</a>
+
+		</div>
+		{% endfor %}
+
+		<div class="checkout__list-item card-catalog-small--last">
+		  <div class="card-catalog-small">
+		    <div class="card-catalog-small__title">Summary:</div>
+		    <div class="card-catalog-small__price">1000 <span>UAH</span></div>
+		  </div>
+		</div>
+
+	</div>
+
+	<div class="popup-cart__actions">
+		<a href="catalog.html" class="popup-cart__action btn">Continue shopping</a>
+		<a href="checkout.html" class="popup-cart__action btn btn--accent">Continue to checkout</a>
+	</div>
+
+</div>
+
+{% endblock %}

@@ -77,7 +77,7 @@ $('[data-popup]').each(function () {
 
 	if ($(this).hasClass('js-popup-onhover')) {
 
-		if(window.location.href === "http://localhost:8080/Catalog.html"){
+		if(window.location.href === "/catalog.html"){
 			return 0
 		}
 
@@ -98,6 +98,18 @@ $('[data-popup]').each(function () {
 		});
 
 	}
+});
+
+
+$('.js-tab').on('click', function() {
+
+	let itemContent = $(this).html();
+	$(this).parents('.js-tab-container').find(".js-tab").removeClass('active')
+	$(this).parents('.js-tab-container').find('.js-tab-item').removeClass('active')
+
+	$(this).addClass('active')
+	$(this).parents('.js-tab-container').find("[data-tab-name='" + itemContent + "']").addClass('active')
+
 });
 
 $('#popup-catalog').on('mouseleave', function(event) {
@@ -130,10 +142,12 @@ $('[data-catalog-type]').each(function () {
 
 	$(this).on("click", function (e) {
 		e.preventDefault();
+		$('.js-catalog-switcher').removeClass('active');
+		$(this).addClass('active');
 		let data = $(this).attr('data-catalog-type');
 		let lastClass = $('.js-catalog').attr('class').split(' ').pop();
 		$('.js-catalog').removeClass(lastClass);
-		$('.js-catalog').addClass(data)
+		$('.js-catalog').addClass(data);
 	});
 
 });

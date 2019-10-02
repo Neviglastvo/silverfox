@@ -1,0 +1,78 @@
+---
+title: Nevejestvo`s Cabinet
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="layout__content-container">
+
+	<div class="cabinet">
+
+		<div class="cabinet__item">
+			<div class="cabinet-user-profile">
+
+				<div class="cabinet-user-profile__head">
+					<img class="cabinet-user-profile__avatar" src="./img/logo/logo.svg">
+					<div class="cabinet-user-profile__name">Nevejestvo</div>
+				</div>
+
+				<div class="cabinet-user-profile__redo-icon">{{icon.i('pencil')}}</div>
+
+				<div class="cabinet-user-profile__row">
+					<div class="cabinet-user-profile__col">
+
+						<div class="cabinet-user-profile__item">
+							<div class="cabinet-user-profile__item-title">Имя</div>
+							<div class="cabinet-user-profile__item-content">Nevejestvo</div>
+						</div>
+						<div class="cabinet-user-profile__item">
+							<div class="cabinet-user-profile__item-title">Электронная почтa</div>
+							<div class="cabinet-user-profile__item-content">Nevejestvo@gmail.com</div>
+						</div>
+						<div class="cabinet-user-profile__item">
+							<div class="cabinet-user-profile__item-title">Телефон</div>
+							<div class="cabinet-user-profile__item-content">
+								<div>063 123 45 65 <span>(main)</span></div>
+								<div>063 123 45 65</div>
+								<div>063 123 45 65</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="cabinet-user-profile__col">
+
+						<div class="cabinet-user-profile__item">
+							<div class="cabinet-user-profile__item-title">Адрес для доставок</div>
+							<div class="cabinet-user-profile__item-content">
+								<span>row 1</span>
+								<span>row 2</span>
+								<span>row 3</span>
+							</div>
+						</div>
+						<div class="cabinet-user-profile__item">
+							<div class="cabinet-user-profile__item-title">Дата рождения</div>
+							<div class="cabinet-user-profile__item-content">02.23.2048</div>
+						</div>
+						<div class="cabinet-user-profile__item">
+							<div class="cabinet-user-profile__item-title">Пол</div>
+							<div class="cabinet-user-profile__item-content">Yes</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="cabinet__item"></div>
+		<div class="cabinet__item cabinet__item--half"></div>
+		<div class="cabinet__item cabinet__item--half"></div>
+		<div class="cabinet__item"></div>
+		<div class="cabinet__item"></div>
+	</div>
+
+</div>
+
+{% endblock %}
+
