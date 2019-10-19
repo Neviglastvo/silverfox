@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Nevejestvo`s Cabinet</title>
+    <title>Perfect item view</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
@@ -255,63 +255,188 @@
       <div class="layout__content">
         <!-- BEGIN content -->
         <div class="layout__content-container">
-          <div class="cabinet">
-            <div class="cabinet__item">
-              <div class="cabinet-user-profile">
-                <div class="cabinet-user-profile__head">
-                  <img class="cabinet-user-profile__avatar" src="./img/logo/logo.svg">
-                  <div class="cabinet-user-profile__name">Nevejestvo</div>
+          <div class="layout__content-header">
+            <div class="layout__content-title">Perfect item view</div>
+            <div class="layout__breadcrumbs breadcrumbs">
+              <a href="home.html">Home</a>
+              <a href="catalog.html">Catalog</a>
+              <a href="catalog.html">Category</a>
+              <a href="catalog.html">Brand</a>
+              <span> Perfect item view</span>
+            </div>
+          </div>
+          <div class="catalog-view">
+            <div class="catalog-view__container">
+              <div class="catalog-view__col">
+                <a href="catalog.html" class="catalog-view__category">Category</a>
+                <div class="catalog-view__title"> Perfect item view <div class="catalog-view__title-action">
+                    <svg class="svg svg-heart">
+                      <use xlink:href="img/sprite.svg#svg-heart"></use>
+                    </svg>
+                  </div>
+                  <div class="catalog-view__title-action">
+                    <svg class="svg svg-balance">
+                      <use xlink:href="img/sprite.svg#svg-balance"></use>
+                    </svg>
+                  </div>
                 </div>
-                <div class="cabinet-user-profile__redo-icon">
-                  <svg class="svg svg-pencil">
-                    <use xlink:href="img/sprite.svg#svg-pencil"></use>
-                  </svg>
-                </div>
-                <div class="cabinet-user-profile__row">
-                  <div class="cabinet-user-profile__col">
-                    <div class="cabinet-user-profile__item">
-                      <div class="cabinet-user-profile__item-title">Имя</div>
-                      <div class="cabinet-user-profile__item-content">Nevejestvo</div>
+                <div class="catalog-view__rating">
+                  <div class="catalog-view__stars">
+                    <div class="catalog-view__star active">
+                      <svg class="svg svg-star">
+                        <use xlink:href="img/sprite.svg#svg-star"></use>
+                      </svg>
                     </div>
-                    <div class="cabinet-user-profile__item">
-                      <div class="cabinet-user-profile__item-title">Электронная почтa</div>
-                      <div class="cabinet-user-profile__item-content">Nevejestvo@gmail.com</div>
+                    <div class="catalog-view__star active">
+                      <svg class="svg svg-star">
+                        <use xlink:href="img/sprite.svg#svg-star"></use>
+                      </svg>
                     </div>
-                    <div class="cabinet-user-profile__item">
-                      <div class="cabinet-user-profile__item-title">Телефон</div>
-                      <div class="cabinet-user-profile__item-content">
-                        <div>063 123 45 65 <span>(main)</span></div>
-                        <div>063 123 45 65</div>
-                        <div>063 123 45 65</div>
-                      </div>
+                    <div class="catalog-view__star active">
+                      <svg class="svg svg-star">
+                        <use xlink:href="img/sprite.svg#svg-star"></use>
+                      </svg>
+                    </div>
+                    <div class="catalog-view__star active">
+                      <svg class="svg svg-star">
+                        <use xlink:href="img/sprite.svg#svg-star"></use>
+                      </svg>
+                    </div>
+                    <div class="catalog-view__star">
+                      <svg class="svg svg-star">
+                        <use xlink:href="img/sprite.svg#svg-star"></use>
+                      </svg>
                     </div>
                   </div>
-                  <div class="cabinet-user-profile__col">
-                    <div class="cabinet-user-profile__item">
-                      <div class="cabinet-user-profile__item-title">Адрес для доставок</div>
-                      <div class="cabinet-user-profile__item-content">
-                        <span>row 1</span>
-                        <span>row 2</span>
-                        <span>row 3</span>
+                  <a href="#anchor-comments" class="catalog-view__reviews-link js-scrollLink">16 comments</a>
+                </div>
+                <div class="catalog-view__filters">
+                  <div class="catalog-view__filters-title">Colors:</div>
+                  <div class="catalog-view__filter-item catalog-view__filter-item--color js-make-active">
+                  </div>
+                  <div class="catalog-view__filter-item catalog-view__filter-item--color js-make-active">
+                  </div>
+                  <div class="catalog-view__filter-item catalog-view__filter-item--color js-make-active">
+                  </div>
+                  <div class="catalog-view__filter-item catalog-view__filter-item--color js-make-active">
+                  </div>
+                  <div class="catalog-view__filter-item catalog-view__filter-item--color js-make-active">
+                  </div>
+                </div>
+                <div class="catalog-view__filters">
+                  <div class="catalog-view__filters-title">Sizes:</div>
+                  <div class="catalog-view__filter-item">9<span>cm</span></div>
+                  <div class="catalog-view__filter-item active">11<span>cm</span></div>
+                  <div class="catalog-view__filter-item">13<span>cm</span></div>
+                  <div class="catalog-view__filter-item">15<span>cm</span></div>
+                  <div class="catalog-view__filter-item">17<span>cm</span></div>
+                </div>
+                <div class="catalog-view__price">
+                  <div class="catalog-view__price-final">1000 <span>UAH</span></div>
+                  <div class="catalog-view__price-old">10000 </div>
+                  <div class="catalog-view__price-discount">90%</div>
+                </div>
+                <div class="catalog-view__count">
+                  <input type="number" class="catalog-view__count-input" value="1" />
+                </div>
+                <div class="catalog-view__actions">
+                  <div class="catalog-view__action btn">Add to cart</div>
+                  <div class="catalog-view__action btn btn--accent">Buy now</div>
+                </div>
+              </div>
+              <div class="catalog-view__col">
+                <div class="catalog-view__slider">
+                  <div class="catalog-view__slider-top swiper-container js-catalog-view-slider">
+                    <div class="catalog-view__slider-arrow catalog-view__slider-arrow--prev js-catalog-view-button-prev">
+                      <svg class="svg svg-arrow">
+                        <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                      </svg>
+                    </div>
+                    <div class="catalog-view__slider-top-wrapper swiper-wrapper">
+                      <div class="catalog-view__slider-top-item swiper-slide">
+                        <img class="catalog-view__slider-top-img" src="./img/duck.svg"></img>
+                      </div>
+                      <div class="catalog-view__slider-top-item swiper-slide">
+                        <img class="catalog-view__slider-top-img" src="./img/duck.svg"></img>
+                      </div>
+                      <div class="catalog-view__slider-top-item swiper-slide">
+                        <img class="catalog-view__slider-top-img" src="./img/duck.svg"></img>
+                      </div>
+                      <div class="catalog-view__slider-top-item swiper-slide">
+                        <img class="catalog-view__slider-top-img" src="./img/duck.svg"></img>
+                      </div>
+                      <div class="catalog-view__slider-top-item swiper-slide">
+                        <img class="catalog-view__slider-top-img" src="./img/duck.svg"></img>
+                      </div>
+                      <div class="catalog-view__slider-top-item swiper-slide">
+                        <img class="catalog-view__slider-top-img" src="./img/duck.svg"></img>
+                      </div>
+                      <div class="catalog-view__slider-top-item swiper-slide">
+                        <img class="catalog-view__slider-top-img" src="./img/duck.svg"></img>
                       </div>
                     </div>
-                    <div class="cabinet-user-profile__item">
-                      <div class="cabinet-user-profile__item-title">Дата рождения</div>
-                      <div class="cabinet-user-profile__item-content">02.23.2048</div>
+                    <div class="catalog-view__slider-arrow catalog-view__slider-arrow--next js-catalog-view-button-next">
+                      <svg class="svg svg-arrow">
+                        <use xlink:href="img/sprite.svg#svg-arrow"></use>
+                      </svg>
                     </div>
-                    <div class="cabinet-user-profile__item">
-                      <div class="cabinet-user-profile__item-title">Пол</div>
-                      <div class="cabinet-user-profile__item-content">Yes</div>
+                  </div>
+                  <div class="catalog-view__slider-bottom swiper-container js-catalog-view-pagination">
+                    <div class="catalog-view__slider-bottom-wrapper swiper-wrapper">
+                      <div class="catalog-view__slider-bottom-item swiper-slide">
+                        <div class="catalog-view__slider-bottom-img">
+                          <svg class="svg svg-duck">
+                            <use xlink:href="img/sprite.svg#svg-duck"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="catalog-view__slider-bottom-item swiper-slide">
+                        <div class="catalog-view__slider-bottom-img">
+                          <svg class="svg svg-duck">
+                            <use xlink:href="img/sprite.svg#svg-duck"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="catalog-view__slider-bottom-item swiper-slide">
+                        <div class="catalog-view__slider-bottom-img">
+                          <svg class="svg svg-duck">
+                            <use xlink:href="img/sprite.svg#svg-duck"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="catalog-view__slider-bottom-item swiper-slide">
+                        <div class="catalog-view__slider-bottom-img">
+                          <svg class="svg svg-duck">
+                            <use xlink:href="img/sprite.svg#svg-duck"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="catalog-view__slider-bottom-item swiper-slide">
+                        <div class="catalog-view__slider-bottom-img">
+                          <svg class="svg svg-duck">
+                            <use xlink:href="img/sprite.svg#svg-duck"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="catalog-view__slider-bottom-item swiper-slide">
+                        <div class="catalog-view__slider-bottom-img">
+                          <svg class="svg svg-duck">
+                            <use xlink:href="img/sprite.svg#svg-duck"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="catalog-view__slider-bottom-item swiper-slide">
+                        <div class="catalog-view__slider-bottom-img">
+                          <svg class="svg svg-duck">
+                            <use xlink:href="img/sprite.svg#svg-duck"></use>
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="cabinet__item"></div>
-            <div class="cabinet__item cabinet__item--half"></div>
-            <div class="cabinet__item cabinet__item--half"></div>
-            <div class="cabinet__item"></div>
-            <div class="cabinet__item"></div>
           </div>
         </div>
         <!-- END content -->

@@ -39,3 +39,45 @@
 			height: 20px
 			fill: $white
 
+	&__dropdown
+		+materialShadow(2,3,$white)
+		position: absolute
+		top: 38px
+		left: 0
+		width: 100%
+		height: auto
+		max-height: 600px
+		overflow-x: hidden
+		overflow-y: auto
+		pointer-events: none
+		border-radius: 0 0 8px 8px
+		height: 0
+		overflow: hidden
+		opacity: 0
+		+tr
+		&.active
+			opacity: 1
+			overflow-x: hidden
+			overflow-y: auto
+			height: auto
+
+			pointer-events: all
+
+	&__item
+		height: 40px
+		line-height: 40px
+		border-bottom: 1px solid $accent
+		background-color: $white
+		color: $black
+		padding: 0 15px
+		font-size: 12px
+		font-family: $fc
+		+trs(200)
+		+h
+			background-color: $accent
+			background-image: $gradient
+			color: $white
+		&:last-child
+			border-radius: 0 0 8px 8px
+			overflow: hidden
+			border: none

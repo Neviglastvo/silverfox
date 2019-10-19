@@ -1,0 +1,113 @@
+---
+title: Perfect item view
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="layout__content-container">
+
+  <div class="layout__content-header">
+    <div class="layout__content-title">{{ title }}</div>
+    <div class="layout__breadcrumbs breadcrumbs">
+      <a href="home.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="catalog.html">Category</a>
+      <a href="catalog.html">Brand</a>
+      <span> {{ title }}</span>
+    </div>
+  </div>
+
+  <div class="catalog-view">
+    <div class="catalog-view__container">
+      <div class="catalog-view__col">
+        <a href="catalog.html" class="catalog-view__category">Category</a>
+
+        <div class="catalog-view__title">
+          {{ title }}
+          <div class="catalog-view__title-action">{{icon.i('heart')}}</div>
+          <div class="catalog-view__title-action">{{icon.i('balance')}}</div>
+        </div>
+
+        <div class="catalog-view__rating">
+          <div class="catalog-view__stars">
+            {% for page in range(1, 5) %}
+            <div class="catalog-view__star active">{{icon.i('star')}}</div>
+            {% endfor %}
+            <div class="catalog-view__star">{{icon.i('star')}}</div>
+          </div>
+          <a href="#anchor-comments" class="catalog-view__reviews-link js-scrollLink">16 comments</a>
+        </div>
+        <div class="catalog-view__filters">
+          <div class="catalog-view__filters-title">Colors:</div>
+
+          {% for page in range(1, 6) %}
+          <div class="catalog-view__filter-item catalog-view__filter-item--color js-make-active">
+          </div>
+          {% endfor %}
+
+        </div>
+        <div class="catalog-view__filters">
+          <div class="catalog-view__filters-title">Sizes:</div>
+          <div class="catalog-view__filter-item">9<span>cm</span></div>
+          <div class="catalog-view__filter-item active">11<span>cm</span></div>
+          <div class="catalog-view__filter-item">13<span>cm</span></div>
+          <div class="catalog-view__filter-item">15<span>cm</span></div>
+          <div class="catalog-view__filter-item">17<span>cm</span></div>
+        </div>
+        <div class="catalog-view__price">
+          <div class="catalog-view__price-final">1000 <span>UAH</span></div>
+          <div class="catalog-view__price-old">10000 </div>
+          <div class="catalog-view__price-discount">90%</div>
+        </div>
+        <div class="catalog-view__count">
+          <input type="number" class="catalog-view__count-input" value="1" />
+        </div>
+
+        <div class="catalog-view__actions">
+          <div class="catalog-view__action btn">Add to cart</div>
+          <div class="catalog-view__action btn btn--accent">Buy now</div>
+        </div>
+
+      </div>
+      <div class="catalog-view__col">
+
+        <div class="catalog-view__slider">
+
+          <div class="catalog-view__slider-top swiper-container js-catalog-view-slider">
+
+            <div class="catalog-view__slider-arrow catalog-view__slider-arrow--prev js-catalog-view-button-prev">{{icon.i('arrow')}}</div>
+
+            <div class="catalog-view__slider-top-wrapper swiper-wrapper">
+              {% for page in range(1, 8) %}
+              <div class="catalog-view__slider-top-item swiper-slide">
+                <img class="catalog-view__slider-top-img" src="./img/duck.svg"></img>
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="catalog-view__slider-arrow catalog-view__slider-arrow--next js-catalog-view-button-next">{{icon.i('arrow')}}</div>
+
+          </div>
+
+          <div class="catalog-view__slider-bottom swiper-container js-catalog-view-pagination">
+            <div class="catalog-view__slider-bottom-wrapper swiper-wrapper">
+              {% for page in range(1, 8) %}
+              <div class="catalog-view__slider-bottom-item swiper-slide">
+                <div class="catalog-view__slider-bottom-img">{{icon.i('duck')}}</div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+
+

@@ -1,4 +1,6 @@
 import Swiper from 'swiper';
+// import tc from 'timecircles';
+// import slick from 'slick-carousel';
 
 import navPopupLogic from './lib/navPopupLogic.js';
 import entranceKeeper from './lib/entranceKeeper.js';
@@ -12,19 +14,16 @@ $('.js-entrance').on('click', function(event) {
 	entranceKeeper()
 });
 
-// import tc from 'timecircles';
-// import slick from 'slick-carousel';
-
-var galleryThumbs = new Swiper('.js-slider-home-pagination', {
+var sliderHomePagination = new Swiper('.js-slider-home-pagination', {
 	spaceBetween: 0,
 	slidesPerView: 3,
 	loop: true,
 	freeMode: true,
-		loopedSlides: 3, // looped slides should be the same
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-	});
-var galleryTop = new Swiper('.js-slider-home', {
+	loopedSlides: 3, // looped slides should be the same
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+});
+var sliderHome = new Swiper('.js-slider-home', {
 	spaceBetween: 0,
 	loop:true,
 		loopedSlides: 3, // looped slides should be the same
@@ -33,7 +32,29 @@ var galleryTop = new Swiper('.js-slider-home', {
 			prevEl: '.js-slider-home-button-prev',
 		},
 		thumbs: {
-			swiper: galleryThumbs,
+			swiper: sliderHomePagination,
+		},
+	});
+
+var sliderCatalogViewItemPager = new Swiper('.js-catalog-view-pagination', {
+	spaceBetween: 0,
+	slidesPerView: 5,
+	loop: true,
+	freeMode: false,
+	loopedSlides: 3, // looped slides should be the same
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+});
+var sliderCatalogViewItem = new Swiper('.js-catalog-view-slider', {
+	spaceBetween: 0,
+	loop:true,
+		loopedSlides: 5, // looped slides should be the same
+		navigation: {
+			nextEl: '.js-catalog-view-button-next',
+			prevEl: '.js-catalog-view-button-prev',
+		},
+		thumbs: {
+			swiper: sliderCatalogViewItemPager,
 		},
 	});
 
@@ -45,11 +66,6 @@ function navigationActive(){
 	});
 }
 navigationActive()
-
-
-
-
-
 
 
 $('#popup-catalog, #popup-cart').on('mouseleave', function(event) {
@@ -105,6 +121,18 @@ $('[data-catalog-type]').each(function () {
 	});
 
 });
+
+$('.js-search-input').on('input change', function(event) {
+	event.preventDefault();
+	$('.js-search-dropdown').addClass('active')
+});
+$('.js-search-input').on('focusout', function(event) {
+	event.preventDefault();
+	$(this).val('');
+	$('.js-search-dropdown').removeClass('active');
+});
+
+
 
 // $('.js-slider').slick({
 // 	infinite: true,
