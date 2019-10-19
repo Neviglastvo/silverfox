@@ -1,37 +1,9 @@
 import Swiper from 'swiper';
-import Cookies from 'js-cookie';
 
+import navPopupLogic from './lib/navPopupLogic.js';
+import entranceKeeper from './lib/entranceKeeper.js';
 
-
-function entranceKeeper(){
-
-	let val = Cookies.get('enter')
-	console.log(val);
-
-	if (!Cookies.get('enter')) {
-
-		console.log(' create ');
-		Cookies.set('enter', 'false');
-		$('.layout').addClass('blur');
-		$('.js-check18').addClass('active');
-
-	}
-
-	if (val === 'false') {
-
-		console.log('exist and false');
-		$('.layout').addClass('blur');
-		$('.js-check18').addClass('active');
-
-	} else if (val === 'true'){
-
-		console.log('else (val=true)');
-		$('.layout').removeClass('blur');
-		$('.js-check18').removeClass('active');
-
-	}
-
-}
+navPopupLogic()
 entranceKeeper()
 
 $('.js-entrance').on('click', function(event) {
@@ -65,40 +37,32 @@ var galleryTop = new Swiper('.js-slider-home', {
 		},
 	});
 
+
 function navigationActive(){
-	let loc = window.location.pathname;
+	let loc = window.location.pathname.slice(1);
 	$('.navigation').find('a').each(function() {
 		$(this).toggleClass('active', $(this).attr('href') == loc);
 	});
 }
 navigationActive()
 
-$('[data-popup]').each(function () {
 
-	if ($(this).hasClass('js-popup-onhover')) {
 
-		if(window.location.href === "/catalog.html"){
-			return 0
-		}
 
-		$(this).on("mouseover", function (e) {
-			e.preventDefault();
-			var content = $(this).attr('data-popup');
-			$('.js-popup').removeClass('active');
-			$('#popup-' + content).addClass('active')
-		});
 
-	} else {
 
-		$(this).on("click", function (e) {
-			e.preventDefault();
-			var content = $(this).attr('data-popup');
-			$('.js-popup').removeClass('active');
-			$('#popup-' + content).addClass('active')
-		});
 
-	}
+$('#popup-catalog, #popup-cart').on('mouseleave', function(event) {
+	$(this).removeClass('active')
 });
+
+
+
+$('.js-popup-close').on('click', function(event) {
+	event.preventDefault();
+	$(this).closest('.js-popup').removeClass('active');
+});
+
 
 
 $('.js-tab').on('click', function() {
@@ -110,16 +74,6 @@ $('.js-tab').on('click', function() {
 	$(this).addClass('active')
 	$(this).parents('.js-tab-container').find("[data-tab-name='" + itemContent + "']").addClass('active')
 
-});
-
-$('#popup-catalog').on('mouseleave', function(event) {
-	$(this).removeClass('active')
-});
-
-
-$('.js-popup-close').on('click', function(event) {
-	event.preventDefault();
-	$(this).closest('.js-popup').removeClass('active');
 });
 
 

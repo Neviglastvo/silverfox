@@ -18,7 +18,9 @@ function createConfig(env) {
     context: path.join(__dirname, config.src.js),
     entry: {
       // vendor: ['jquery'],
-      app: './app.js',
+      global: './global.js',
+      index: './index.js',
+      catalog: './catalog.js',
     },
     output: {
       path: path.join(__dirname, config.dest.js),

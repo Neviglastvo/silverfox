@@ -5,30 +5,37 @@
 	height: 40px
 	position: relative
 
-	svg
-		width: 20px
-		height: 20px
-		position: absolute
-		top: 0
-		bottom: 0
-		margin: auto 0
-		left: 0
-		fill: $white
-
 	&__input
 		height: 100%
 		width: 100%
 		background-color: transparent
 		border: 0
 		border-bottom: 2px solid $white
-		margin-right: 10px
 		line-height: 40px
-		padding-left: 30px
+		padding: 0 10px
+		font-family: $fc
 		color: $white
-		+h
+		+tr
+		&:hover, &:active, &:focus
 			border-color: $accent
+		+placeholder
+			font-family: $fc
 
 	&__action
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		right: 10px
+		top: 0
+		bottom: 0
+		margin: auto 0
 		+h
 			cursor: pointer
+			svg
+				fill: $accent
+		svg
+			width: 20px
+			height: 20px
+			fill: $white
 

@@ -19,8 +19,14 @@
 		align-items: center
 		padding: 40px
 		position: relative
-		@include linearGradient(rgba($accent, 0.45), rgba($accent, 0.75))
+		// @include linearGradient(rgba($accent, 0.45), rgba($accent, 0.75))
+		// background-image: $gradient
 		flex-shrink: 5
+		border: 1px solid $accent
+		border-right: 1px solid $accent
+		border-left: none
+		&:last-child
+			border-right: none
 		+tr
 		+h
 			&:first-child
