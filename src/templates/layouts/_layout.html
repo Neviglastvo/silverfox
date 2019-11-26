@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"></link>
   {# {% include "../partials/_media-tags.html" %} #}
 </head>
-<body>
+<body data-theme="light">
 
   {% include "layouts/_help-block.html" %}
   {% include "partials/_check18.html" %}
@@ -25,10 +25,15 @@
       <div class="sidebar">
         <div class="sidebar__container">
 
-          <a href="home.html" class="sidebar__logo">
-            <img src="./img/logo.svg" alt="" class="logo" />
-            <div class="sidebar__logo-text">silverfox</div>
-          </a>
+          <div class="sidebar__item sidebar__item--nobg sidebar__logo">
+            <a href="home.html" class="sidebar__logo-link">
+              <img src="./img/logo.svg" alt="" class="logo" />
+              <div class="sidebar__logo-text">silverfox</div>
+            </a>
+            <div class="theme-switcher js-theme-switcher">
+              {{icon.i('duck')}}
+            </div>
+          </div>
 
           <div class="sidebar__item sidebar__search">{% include "partials/sidebar/_search.html" %}</div>
           <div class="sidebar__item sidebar__navigation">{% include "partials/sidebar/_navigation.html" %}</div>

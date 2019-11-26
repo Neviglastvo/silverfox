@@ -1,0 +1,40 @@
+@mixin defineColorHSL($color, $hue, $saturation, $lightness){
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");#{$color}-h: #{$hue};#{$color}-s: #{$saturation};#{$color}-l: #{$lightness};
+}
+
+:root, [data-theme="light"] {
+  @include defineColorHSL(--color-accent, 351, 52%, 43%);
+  @include defineColorHSL(--color-black, 216, 19%, 10%);
+  @include defineColorHSL(--color-black-d, 232, 19%, 16%);
+  @include defineColorHSL(--color-white, 96, 71%, 99%);
+  // color contrasts
+  @include defineColorHSL(--color-bg, 0, 0%, 100%);
+  @include defineColorHSL(--color-contrast-lower, 0, 0%, 95%);
+  @include defineColorHSL(--color-contrast-low, 240, 1%, 83%);
+  @include defineColorHSL(--color-contrast-medium, 240, 1%, 48%);
+  @include defineColorHSL(--color-contrast-high, 240, 4%, 20%);
+  @include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
+}
+
+:root, [data-theme="dark"] {
+  @include defineColorHSL(--color-accent, 351, 52%, 43%);
+  @include defineColorHSL(--color-black, 96, 71%, 99%);
+  @include defineColorHSL(--color-black-d, 96, 0%, 72%);
+  @include defineColorHSL(--color-white, 216, 19%, 10%);
+  // color contrasts
+  @include defineColorHSL(--color-bg, 0, 0%, 100%);
+  @include defineColorHSL(--color-contrast-lower, 0, 0%, 95%);
+  @include defineColorHSL(--color-contrast-low, 240, 1%, 83%);
+  @include defineColorHSL(--color-contrast-medium, 240, 1%, 48%);
+  @include defineColorHSL(--color-contrast-high, 240, 4%, 20%);
+  @include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
+}
+
+@function lightness($color, $lightnessMultiplier){
+  $color: strReplace($color, 'var(');
+  $color: strReplace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsl($color-h, $color-s, calc(#{$color-l} * #{$lightnessMultiplier}));
+}

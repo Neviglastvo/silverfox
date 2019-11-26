@@ -28,4 +28,11 @@ export default function entranceKeeper(){
 
 	}
 
+	$('.js-entrance').on('click', function(event) {
+		event.preventDefault();
+		Cookies.set('enter', 'true');
+		entranceKeeper()
+	});
+
 }
+

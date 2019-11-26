@@ -1,0 +1,81 @@
+.aboutUs
+	width: 100%
+	&__container
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		padding: 0 20px
+		padding-top: 0
+		align-items: stretch
+	&__row
+		width: 100%
+		padding: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+		+mbl(20px)
+		&--65
+			width: 65%
+		&--35
+			width: 35%
+		&--bordered
+			border: 1px solid $black
+
+
+	&__title
+		margin-bottom: 20px
+		font-size: 34px
+		font-family: $fc
+		font-weight: 700
+
+	&__subtile
+		display: flex
+		align-items: center
+		font-size: 34px
+		font-family: $fa
+		font-weight: 900
+		margin-bottom: 30px
+		.logo
+			width: 50px
+			height: 50px
+			margin-left: 30px
+			+tr
+			+h
+				+rotate(1800)
+
+	&__text
+		font-size: 18px
+		font-family: $fc
+		+mbl(20px)
+
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+
+	&__list-item
+		width: 25%
+		padding: 15px
+		svg
+			fill: $black
+			+tr
+		+h
+			color: $accent
+			svg
+				fill: $accent
+			.aboutUs__list-item-container
+				border-color: $accent
+
+	&__list-item-container
+		padding: 15px
+		border: 1px solid $black
+		+tr
+
+
+	&__list-item-icon
+
+	&__list-item-text
+		width: 100%
+		text-align: center
+		font-size: 22px
+		font-family: $fc

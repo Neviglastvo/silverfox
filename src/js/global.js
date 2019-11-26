@@ -2,17 +2,32 @@ import Swiper from 'swiper';
 // import tc from 'timecircles';
 // import slick from 'slick-carousel';
 
-import navPopupLogic from './lib/navPopupLogic.js';
-import entranceKeeper from './lib/entranceKeeper.js';
+import navPopupLogic from './lib/navPopupLogic';
+import entranceKeeper from './lib/entranceKeeper';
 
 navPopupLogic()
 entranceKeeper()
 
-$('.js-entrance').on('click', function(event) {
-	event.preventDefault();
-	Cookies.set('enter', 'true');
-	entranceKeeper()
-});
+function themeSwitcher(){
+	$('.js-theme-switcher').on('click', function(e) {
+		e.preventDefault();
+
+		$('body').toggleAttr('data-theme', 'dark', 'light');
+
+
+	});
+}
+themeSwitcher()
+
+$.fn.toggleAttr = function(attr, attr1, attr2) {
+  return this.each(function() {
+    var self = $(this);
+    if (self.attr(attr) == attr1)
+      self.attr(attr, attr2);
+    else
+      self.attr(attr, attr1);
+  });
+};
 
 var sliderHomePagination = new Swiper('.js-slider-home-pagination', {
 	spaceBetween: 0,

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
     </link>
   </head>
-  <body>
+  <body data-theme="light">
     <div class="help-block">
       <span>?</span>
       <div class="help-block__container f">
@@ -108,10 +108,17 @@
       <div class="layout__sidebar">
         <div class="sidebar">
           <div class="sidebar__container">
-            <a href="home.html" class="sidebar__logo">
-              <img src="./img/logo.svg" alt="" class="logo" />
-              <div class="sidebar__logo-text">silverfox</div>
-            </a>
+            <div class="sidebar__item sidebar__item--nobg sidebar__logo">
+              <a href="home.html" class="sidebar__logo-link">
+                <img src="./img/logo.svg" alt="" class="logo" />
+                <div class="sidebar__logo-text">silverfox</div>
+              </a>
+              <div class="theme-switcher js-theme-switcher">
+                <svg class="svg svg-duck">
+                  <use xlink:href="img/sprite.svg#svg-duck"></use>
+                </svg>
+              </div>
+            </div>
             <div class="sidebar__item sidebar__search">
               <div class="search">
                 <input type="text" class="search__input js-search-input" placeholder="Search here ..." />

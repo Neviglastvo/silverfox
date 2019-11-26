@@ -1,0 +1,88 @@
+---
+title: About Silverfox
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="layout__content-container">
+
+	<div class="layout__content-header">
+		<div class="layout__content-title">{{ title }}</div>
+		<div class="layout__breadcrumbs breadcrumbs">
+			<a href="home.html">Home</a>
+			<span> {{ title }}</span>
+		</div>
+	</div>
+
+	<div class="aboutUs">
+		<div class="aboutUs__container">
+			<div class="aboutUs__row aboutUs__row--65 aboutUs__row--bordered">
+
+				<div class="aboutUs__title">WE ARE</div>
+				<div class="aboutUs__subtile">
+					Silverfox
+					<img src="./img/logo.svg" alt="" class="logo" />
+				</div>
+				<div class="aboutUs__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus laborum fuga quae maiores culpa dolorum necessitatibus optio vel autem sequi?</div>
+				<div class="aboutUs__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus laborum fuga quae maiores culpa dolorum necessitatibus optio vel autem sequi?</div>
+				<div class="aboutUs__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus laborum fuga quae maiores culpa dolorum necessitatibus optio vel autem sequi?</div>
+
+			</div>
+			<div class="aboutUs__row aboutUs__row--35">
+				<div class="stats">
+					<div class="stats__title">Stats</div>
+					<div class="stats__list">
+						<div class="stats__list-item">Total sales<span>999</span></div>
+						<div class="stats__list-item">Today sales<span>9</span></div>
+						<div class="stats__list-item">Failed order<span>4</span></div>
+						<div class="stats__list-item">5 star comments<span>100</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="aboutUs__row aboutUs__row--bordered">
+
+				<div class="aboutUs__title">We are here to</div>
+
+				<div class="aboutUs__list">
+
+					{% for page in range(0, 4) %}
+					<div class="aboutUs__list-item">
+						<div class="aboutUs__list-item-container">
+							<div class="aboutUs__list-item-icon">{{icon.i('duck')}}</div>
+							<div class="aboutUs__list-item-text">item</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+
+			</div>
+
+			<div class="aboutUs__row aboutUs__row--bordered">
+
+				<div class="aboutUs__title">We are here to 2</div>
+
+				<div class="aboutUs__list">
+
+					{% for page in range(0, 4) %}
+					<div class="aboutUs__list-item">
+						<div class="aboutUs__list-item-container">
+							<div class="aboutUs__list-item-icon">{{icon.i('duck')}}</div>
+							<div class="aboutUs__list-item-text">item</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+
+	{% endblock %}

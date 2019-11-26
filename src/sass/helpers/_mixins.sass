@@ -353,3 +353,9 @@
 @mixin linearGradient($color2, $color1, $direction: left)
   background: $color1
   background: linear-gradient(to $direction, $color1 0%, $color2 100%)
+
+
+@mixin mbl($amount)
+  margin-bottom: $amount
+  &:last-child
+    margin-bottom: 0
