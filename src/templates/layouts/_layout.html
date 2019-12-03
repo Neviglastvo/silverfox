@@ -30,8 +30,11 @@
               <img src="./img/logo.svg" alt="" class="logo" />
               <div class="sidebar__logo-text">silverfox</div>
             </a>
-            <div class="theme-switcher js-theme-switcher">
-              {{icon.i('duck')}}
+            <div class="theme-switcher">
+              <input class="theme-switcher__input js-theme-switcher" type="checkbox" id="themeSwitch">
+              <label aria-hidden="true" class="theme-switcher__label" for="themeSwitch">
+                {{icon.i('themeSwitcher')}}
+              </label>
             </div>
           </div>
 

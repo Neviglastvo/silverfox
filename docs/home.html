@@ -8,10 +8,13 @@
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    </link>
     <link rel="stylesheet" media="all" href="css/app.css" />
+    </link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    </link>
   </head>
-  <body>
+  <body data-theme="light">
     <div class="help-block">
       <span>?</span>
       <div class="help-block__container f">
@@ -105,20 +108,39 @@
       <div class="layout__sidebar">
         <div class="sidebar">
           <div class="sidebar__container">
-            <a href="home.html" class="sidebar__logo">
-              <img src="./img/logo.svg" alt="" class="logo" />
-              <div class="sidebar__logo-text">silverfox</div>
-            </a>
-            <div class="sidebar__search">
-              <div class="search">
-                <svg class="svg svg-search">
-                  <use xlink:href="img/sprite.svg#svg-search"></use>
-                </svg>
-                <input type="text" class="search__input" />
-                <div class="search__action">Search!</div>
+            <div class="sidebar__item sidebar__item--nobg sidebar__logo">
+              <a href="home.html" class="sidebar__logo-link">
+                <img src="./img/logo.svg" alt="" class="logo" />
+                <div class="sidebar__logo-text">silverfox</div>
+              </a>
+              <div class="theme-switcher">
+                <input class="theme-switcher__input" type="checkbox" id="themeSwitch" class="js-theme-switcher">
+                <label aria-hidden="true" class="theme-switcher__label" for="themeSwitch">
+                  <svg class="svg svg-themeSwitcher">
+                    <use xlink:href="img/sprite.svg#svg-themeSwitcher"></use>
+                  </svg>
+                </label>
               </div>
             </div>
-            <div class="sidebar__navigation">
+            <div class="sidebar__item sidebar__search">
+              <div class="search">
+                <input type="text" class="search__input js-search-input" placeholder="Search here ..." />
+                <div class="search__action">
+                  <svg class="svg svg-search">
+                    <use xlink:href="img/sprite.svg#svg-search"></use>
+                  </svg>
+                </div>
+                <div class="search__dropdown js-search-dropdown">
+                  <div class="search__item">Search result</div>
+                  <div class="search__item">Search result</div>
+                  <div class="search__item">Search result</div>
+                  <div class="search__item">Search result</div>
+                  <div class="search__item">Search result</div>
+                  <div class="search__item">Search result</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar__item sidebar__navigation">
               <div class="navigation">
                 <div class="navigation__item js-popup-onhover" data-popup="catalog">
                   <a href="catalog.html" class="navigation__link">
@@ -155,7 +177,7 @@
                   <span>Delivery</span></a>
               </div>
             </div>
-            <div class="sidebar__user">
+            <div class="sidebar__item sidebar__user">
               <!-- <div class="user" data-popup="cabinet"> -->
               <div class="user">
                 <div class="user__avatar">N</div>
@@ -172,18 +194,16 @@
                 </div>
               </div>
             </div>
-            <div class="sidebar__cart">
-              <div class="cart js-popup-onhover" data-popup="cart">
-                <div class="cart__icon">
-                  <svg class="svg svg-cart">
-                    <use xlink:href="img/sprite.svg#svg-cart"></use>
-                  </svg>
-                </div>
-                <div class="cart__info">3 items</div>
+            <div class="sidebar__item sidebar__cart"><a href="checkout.html" class="cart js-popup-onhover" data-popup="cart">
+                <!-- <div class="cart__icon">
+<svg class="svg svg-cart"><use xlink:href="img/sprite.svg#svg-cart"></use></svg>
+</div> -->
+                <div class="cart__icon">3</div>
+                <div class="cart__info">Your cart</div>
                 <div class="cart__price">99$</div>
-              </div>
+              </a>
             </div>
-            <div class="sidebar__contacts">
+            <div class="sidebar__item sidebar__contacts">
               <div class="contacts">
                 <!-- <div class="contacts__title">Contacts </div> -->
                 <div class="contacts__item">
@@ -200,15 +220,14 @@
                   </svg> 063 123 45 78</div>
               </div>
             </div>
-            <div class="sidebar__shedule">
+            <div class="sidebar__item sidebar__shedule">
               <div class="shedule">
                 <!-- <div class="shedule__title">Shedule</div> -->
-                <div class="shedule__item">Mn - Fr 10:00 - 18:00</div>
-                <div class="shedule__item">Sat 10:00 - 18:00</div>
-                <div class="shedule__item">Sun 10:00 - 18:00</div>
+                <div class="shedule__item">Mn - Sat 10:00 - 18:00</div>
+                <div class="shedule__item">Sun 10:00 - 16:00</div>
               </div>
             </div>
-            <div class="sidebar__social">
+            <div class="sidebar__item sidebar__social">
               <div class="social">
                 <div class="social__item">
                   <svg class="svg svg-facebook">
@@ -232,7 +251,14 @@
                 </div>
               </div>
             </div>
-            <div class="sidebar__copyright">Copyright</div>
+            <div class="sidebar__item sidebar__social">
+              <div class="language-switcher">
+                <div class="language-switcher__item active">EN</div>
+                <div class="language-switcher__item">UA</div>
+                <div class="language-switcher__item">RU</div>
+              </div>
+            </div>
+            <div class="sidebar__copyright">silverfox© 2019</div>
           </div>
         </div>
       </div>
@@ -260,7 +286,7 @@
                   </div>
                   <div class="home-slider__label">new</div>
                   <div class="home-slider__action-left">
-                    <a href="item-view.html" class="home-slider__action btn">More info</a>
+                    <a href="catalog-view.html" class="home-slider__action btn">More info</a>
                     <div class="home-slider__action btn">
                       <svg class="svg svg-cart">
                         <use xlink:href="img/sprite.svg#svg-cart"></use>
@@ -282,7 +308,7 @@
                   </div>
                   <div class="home-slider__label">new</div>
                   <div class="home-slider__action-left">
-                    <a href="item-view.html" class="home-slider__action btn">More info</a>
+                    <a href="catalog-view.html" class="home-slider__action btn">More info</a>
                     <div class="home-slider__action btn">
                       <svg class="svg svg-cart">
                         <use xlink:href="img/sprite.svg#svg-cart"></use>
@@ -304,7 +330,7 @@
                   </div>
                   <div class="home-slider__label">new</div>
                   <div class="home-slider__action-left">
-                    <a href="item-view.html" class="home-slider__action btn">More info</a>
+                    <a href="catalog-view.html" class="home-slider__action btn">More info</a>
                     <div class="home-slider__action btn">
                       <svg class="svg svg-cart">
                         <use xlink:href="img/sprite.svg#svg-cart"></use>
@@ -326,7 +352,7 @@
                   </div>
                   <div class="home-slider__label">new</div>
                   <div class="home-slider__action-left">
-                    <a href="item-view.html" class="home-slider__action btn">More info</a>
+                    <a href="catalog-view.html" class="home-slider__action btn">More info</a>
                     <div class="home-slider__action btn">
                       <svg class="svg svg-cart">
                         <use xlink:href="img/sprite.svg#svg-cart"></use>
@@ -348,7 +374,7 @@
                   </div>
                   <div class="home-slider__label">new</div>
                   <div class="home-slider__action-left">
-                    <a href="item-view.html" class="home-slider__action btn">More info</a>
+                    <a href="catalog-view.html" class="home-slider__action btn">More info</a>
                     <div class="home-slider__action btn">
                       <svg class="svg svg-cart">
                         <use xlink:href="img/sprite.svg#svg-cart"></use>
@@ -424,7 +450,7 @@
         <div class="home-layout" id="homeMore">
           <div class="home-layout__container">
             <div class="home-layout__item-container home-layout__item-container--1 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-duck">
                     <use xlink:href="img/sprite.svg#svg-duck"></use>
@@ -442,7 +468,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--2 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-blog">
                     <use xlink:href="img/sprite.svg#svg-blog"></use>
@@ -459,7 +485,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--2 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-blog">
                     <use xlink:href="img/sprite.svg#svg-blog"></use>
@@ -476,7 +502,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--3 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -494,7 +520,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--3 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -512,7 +538,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--3 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -530,7 +556,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--4 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -548,7 +574,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--4 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -566,7 +592,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--4 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -584,7 +610,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--4 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -602,7 +628,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--2 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-blog">
                     <use xlink:href="img/sprite.svg#svg-blog"></use>
@@ -619,7 +645,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--2 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-blog">
                     <use xlink:href="img/sprite.svg#svg-blog"></use>
@@ -636,7 +662,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--3 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -654,7 +680,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--3 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -672,7 +698,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--3 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -690,7 +716,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--1 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-duck">
                     <use xlink:href="img/sprite.svg#svg-duck"></use>
@@ -708,7 +734,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--4 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -726,7 +752,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--4 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -744,7 +770,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--4 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -762,7 +788,7 @@
               </a>
             </div>
             <div class="home-layout__item-container home-layout__item-container--4 ">
-              <a href="item-view.html" class="home-layout__item">
+              <a href="catalog-view.html" class="home-layout__item">
                 <div class="home-layout__label">
                   <svg class="svg svg-catalog">
                     <use xlink:href="img/sprite.svg#svg-catalog"></use>
@@ -965,7 +991,7 @@
       </div>
     </div>
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
     <!-- END scripts -->
   </body>
 </html>

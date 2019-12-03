@@ -2,7 +2,10 @@
 	width: 100%
 	height: 100vh
 	min-height: 600px
+	padding: 0 20px
 	font-family: $fa
+
+
 
 	&__container
 		height: 67vh
@@ -131,12 +134,10 @@
 		&.swiper-slide-thumb-active
 			background-color: $accent
 			background-image: $gradient
-			color: $white
+			color: var(--color-text)
 			+h
 				cursor: default
 
-			svg
-				fill: $white
 
 	&__pagination-title
 		position: absolute
@@ -163,7 +164,7 @@
 		width: 50px
 		height: 50px
 		border-radius: 50%
-		border: 2px solid $black
+		border: 2px solid var(--color-text)
 		padding: 14px
 		z-index: 3
 		+tr
@@ -175,12 +176,12 @@
 			height: 100%
 
 		&--prev
+			right: 40px
+
+		&--next
 			left: 40px
 			svg
 				+rotate(180)
-
-		&--next
-			right: 40px
 
 	&__footer
 		height: 8vh
@@ -205,3 +206,5 @@
 		height: 30px
 		+rotate(90)
 		+tr
+		svg
+			fill: var(--color-text)

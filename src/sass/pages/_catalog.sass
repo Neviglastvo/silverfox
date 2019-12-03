@@ -22,8 +22,8 @@
 		// @include linearGradient(rgba($accent, 0.45), rgba($accent, 0.75))
 		// background-image: $gradient
 		flex-shrink: 5
-		border: 1px solid $accent
-		border-right: 1px solid $accent
+		border: 1px solid var(--color-border)
+		border-right: 1px solid var(--color-border)
 		border-left: none
 		&:last-child
 			border-right: none
@@ -106,9 +106,9 @@
 			.catalog__content-item
 				width: 100%
 				&:nth-child(3n+1)
-					border-right: 1px solid $black
+					border-right: 1px solid var(--color-border)
 				&:nth-child(3n+3)
-					border-left: 1px solid $black
+					border-left: 1px solid var(--color-border)
 				.card-catalog-item
 					min-height: 200px
 					&:before
@@ -144,7 +144,7 @@
 						max-width: calc(100%/3)
 						height: 100%
 						pointer-events: all
-						border-right: 1px solid $black
+						border-right: 1px solid var(--color-border)
 						left: auto
 						right: auto
 
@@ -166,9 +166,9 @@
 						padding: 0 15px 15px 15px
 
 	&__content-item
-		border-left: 1px solid $black
-		border-right: 1px solid $black
-		border-bottom: 1px solid $black
+		border-left: 1px solid var(--color-border)
+		border-right: 1px solid var(--color-border)
+		border-bottom: 1px solid var(--color-border)
 		&:nth-child(3n+1)
 			border-right: none
 		&:nth-child(3n+3)
@@ -196,7 +196,7 @@
 		font-size: 18px
 		font-weight: 500
 		line-height: 40px
-		border: 1px solid $black
+		border: 1px solid var(--color-border)
 		margin-right: -1px
 		+h
 			cursor: pointer

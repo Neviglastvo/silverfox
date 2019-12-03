@@ -2,22 +2,23 @@ import Swiper from 'swiper';
 // import tc from 'timecircles';
 // import slick from 'slick-carousel';
 
+import themeSwitcher from './lib/themeSwitcher'; //eefe
 import navPopupLogic from './lib/navPopupLogic';
 import entranceKeeper from './lib/entranceKeeper';
 
 navPopupLogic()
 entranceKeeper()
 
-function themeSwitcher(){
-	$('.js-theme-switcher').on('click', function(e) {
-		e.preventDefault();
+// function themeSwitcher(){
+// 	$('.js-theme-switcher').on('click', function(e) {
+// 		e.preventDefault();
 
-		$('body').toggleAttr('data-theme', 'dark', 'light');
+// 		$('body').toggleAttr('data-theme', 'dark', 'light');
 
 
-	});
-}
-themeSwitcher()
+// 	});
+// }
+// themeSwitcher()
 
 $.fn.toggleAttr = function(attr, attr1, attr2) {
   return this.each(function() {

@@ -5,7 +5,8 @@ $avatarSize: 120px
 	position: relative
 	margin-top: $avatarSize
 	border-top: none
-	border-bottom: 1px solid $black
+	border-bottom: 1px solid var(--color-border)
+	color: var(--color-text)
 	&__head
 		margin-top: -$avatarSize
 		width: 100%
@@ -19,13 +20,13 @@ $avatarSize: 120px
 			bottom: 0
 			width: 1px
 			height: 50%
-			background-color: $black
+			background-color: var(--color-border)
 
 	&__avatar
 		display: block
 		width: $avatarSize
 		height: $avatarSize
-		border: 1px solid $black
+		border: 1px solid var(--color-border)
 
 	&__name
 		display: flex
@@ -42,7 +43,7 @@ $avatarSize: 120px
 			min-width: 30px
 			margin-right: 15px
 			height: 1px
-			background-color: $black
+			background-color: var(--color-border)
 
 		&:after
 			content: ""
@@ -50,7 +51,7 @@ $avatarSize: 120px
 			width: 100%
 			margin-left: 15px
 			height: 1px
-			background-color: $black
+			background-color: var(--color-border)
 
 	&__row
 		width: 100%
@@ -72,13 +73,13 @@ $avatarSize: 120px
 			svg
 				fill: $accent
 		svg
-			fill: $black
+			fill: var(--color-text)
 
 	&__item
 		padding: 20px 15px
 		display: flex
-		border-left: 1px solid $black
-		border-right: 1px solid $black
+		border-left: 1px solid var(--color-border)
+		border-right: 1px solid var(--color-border)
 
 	&__item-title
 		min-width: 180px

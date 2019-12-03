@@ -113,10 +113,13 @@
                 <img src="./img/logo.svg" alt="" class="logo" />
                 <div class="sidebar__logo-text">silverfox</div>
               </a>
-              <div class="theme-switcher js-theme-switcher">
-                <svg class="svg svg-duck">
-                  <use xlink:href="img/sprite.svg#svg-duck"></use>
-                </svg>
+              <div class="theme-switcher">
+                <input class="theme-switcher__input" type="checkbox" id="themeSwitch" class="js-theme-switcher">
+                <label aria-hidden="true" class="theme-switcher__label" for="themeSwitch">
+                  <svg class="svg svg-themeSwitcher">
+                    <use xlink:href="img/sprite.svg#svg-themeSwitcher"></use>
+                  </svg>
+                </label>
               </div>
             </div>
             <div class="sidebar__item sidebar__search">

@@ -4,6 +4,8 @@
 	display: flex
 	width: 100vw
 	height: 100vh
+	// background-image: linear-gradient(to top, var(--color-mainGrad1) 0%, var(--color-mainGrad1) 1%, var(--color-mainGrad2) 100%);
+	background-image: linear-gradient( 68deg,  var(--color-mainGrad1) 1%, var(--color-mainGrad2) 50%, var(--color-mainGrad3) 99% );
 
 	&__sidebar
 		z-index: 20
@@ -14,7 +16,9 @@
 		min-height: 100vh
 		overflow-x: hidden
 		overflow-y: auto
-		background-color: var(--color-black)
+		position: relative
+		background-color: var(--color-bg)
+		box-shadow: rgba(#000, 0.2) 0px -2px 16px 0px
 		&::-webkit-scrollbar
 			background-color: transparent
 			width: 10px
@@ -26,14 +30,19 @@
 			border-radius: 5px
 		&::-webkit-scrollbar-track-piece
 			background-color: transparent
+		&:after
+			content: ""
+			+coverdiv
+			+better-blur(10)
+			pointer-events: none
 
 	&__content
 		width: 100%
 		overflow-x: hidden
 		overflow-y: auto
-		background-color: var(--color-white)
+		// background-color: var(--color-white)
 		position: relative
-		color: #000
+		color: var(--color-text)
 
 	&__content-container
 		display: flex
@@ -48,7 +57,7 @@
 		justify-content: center
 		align-items: center
 		margin: 0 20px 20px
-		border: 1px solid var(--color-black)
+		border: 1px solid var(--color-border)
 
 	&__content-title
 		font-size:  34px
