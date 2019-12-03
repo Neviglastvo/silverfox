@@ -5,15 +5,15 @@ PageList:
   ready: 50
 - file: catalog.html
   ready: 60
-- file: item-view.html
+- file: catalog-view.html
   ready: 1
 - file: blog.html
   ready: 85
 - file: blog-view.html
-  ready: 85
-- file: about-us.html
+  ready: 100
+- file: aboutUs.html
   ready: 1
 - file: contacts.html
-  ready: 1
+  ready: 0
 - file: delivery.html
-  ready: 1
+  ready: 0
